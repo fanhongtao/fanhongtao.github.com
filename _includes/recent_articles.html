@@ -1,0 +1,10 @@
+<div class="box fn-clear">
+	<h3 class="title">Recent Articles</h3>
+    <ul>
+    {% for rpost in site.related_posts limit:8  %}   
+        <li>
+            <a href="{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a>
+        </li>                                   
+    {% endfor %}
+    </ul>
+</div>

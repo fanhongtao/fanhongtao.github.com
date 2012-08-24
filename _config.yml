@@ -1,0 +1,19 @@
+markdown:         rdiscount
+pygments:         true
+paginate:         4
+
+title:            Black Cube Theme
+# url:              http://www.pizn.me
+feed:             /atom.xml
+author:
+    name:         Fan Hongtao
+    email:        fanhongtao@gmail.com
+description:      "Fan's blog"
+
+about: 			  "I am Fan Hongtao, a programmer working with Android."
+follow:
+    github:       https://github.com/fanhongtao
+
+style: 			  /css/style.css
+blogName: 		  Fan's Blog
+blogDesc: 		  Program, Economy & Life.
