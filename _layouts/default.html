@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
-    **
-    *
-    * Author:         PIZn
-    * Contact:        pizner@gmail.com
-    * Theme Name:     Block Rude
-    * Version:        1.0
-    *
-    **
-  -->
-  <meta charset="utf-8" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <meta name="generator" content="Jekyll" />
   <meta name="author" content="{{ site.author.name }}" />
-  <meta name="description" content="{{ site.descripton }}" />
-  <link rel="stylesheet" href="{{ site.style }}" type="text/css" />
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}" />
+  {% endif %}
+  <link rel="stylesheet" href="/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="/css/pygments.css" type="text/css" />
   <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
-  <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="/favicon.png" type="image/png" />
 </head>
 <body>
     {% include head.html %} 
-  <section id="content">
-    <article id="contenter">
-      {{ content }}
-    </article>
-  </section>
+    <section id="content">
+        <article id="contenter">
+            {{ content }}
+        </article>
+    </section>
     {% include foot.html %}
+    {% if site.github %}
+        <a class="fork-me" href="http://github.com/{{ site.github.username }}" target="_blank" rel="nofollow">
+            <img src="/images/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+        </a>
+    {% endif %}
 </body>
 </html>

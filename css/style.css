@@ -1,3 +1,4 @@
+@CHARSET "UTF-8";
 /**
  *
  * @theme: Black Cube
@@ -16,7 +17,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
                             { display:block; }
 body,button,input,select,textarea   
-                            { font:12px/1.5 tahoma,arial,\5b8b\4f53; }
+                        { font: 13px/1.5 verdana, \5b8b\4f53, \9ED1\4F53, sans-serif; /* 英文字体 verdana，中文宋体和黑体。*/ }
 input,select,textarea       { font-size:100%; }
 table                       { border-collapse:collapse;border-spacing:0; }
 th                          { text-align:inherit; }
@@ -49,7 +50,9 @@ body .fn-hide               { display:none; }
                 default
 --------------------------------------------*/
 body                        { background: url(/images/body-bg.jpg) repeat 0 0; }
+/* Works in Safari */
 ::selection                 { background:#292929; color:#ffffff; text-shadow:none !important; }
+/* Mozilla based browsers */
 *::-moz-selection           { background: none repeat scroll 0 0 #292929; color: #FFFFFF; }
 
 /*--------------------------------------------
@@ -160,7 +163,7 @@ body                        { background: url(/images/body-bg.jpg) repeat 0 0; }
 .entry h1, .entry h2, .entry h3, .entry h4, .entry h5, .entry h6 
                             { margin: 0; padding: 0; font-family: Georgia, "Microsoft Yahei","Microsoft Jhenghei",STHeiti,PMingLiU,Simsun; }
 .entry h1                   { padding: 3px 0; font-size: 20px; line-height: normal; margin-bottom: 20px; color: #383535; font-weight: 700; border-bottom: 1px dashed #a8a8a8; }
-.entry h2                   { margin-bottom: 20px; color: #383535; padding: 3px 0; font-size: 18px; line-height: normal; border-bottom: 1px dashed #a8a8a8; font-family: 700; }
+.entry h2                   { margin-bottom: 20px; color: #383535; padding: 3px 0; font-size: 18px; line-height: normal; border-bottom: 1px dashed #a8a8a8; font-weight: 700; }
 .entry h3                   { font-size: 16px; font-weight: 700; line-height: 26px; color: #383535; border-bottom: 1px dashed #a8a8a8; margin-bottom: 18px; margin-top: 1.5em; }
 .entry h4                   { margin-bottom: 18px; font-size: 14px; font-weight: 700; color: #383535; line-height: 26px; text-transform: uppercase; }
 .entry h5                   { margin-bottom: 18px; color: #383535; font-size: 14px; line-height: 26px; text-transform: uppercase; }
@@ -225,3 +228,51 @@ body                        { background: url(/images/body-bg.jpg) repeat 0 0; }
 .article-box .title a:hover { color: #fefefe; text-decoration: none; }
 .article-box .date          { font-family: Georgia; color: #888; font-style: italic; }
 .article-box .desc          { line-height: 20px; color: #e8e8e8; font-family: Georgia; }
+
+
+/*----------------------------------------
+       Extend part
+----------------------------------------*/
+
+/** Fork Me **/
+.fork-me-old {
+    position: fixed;
+    right: 0;
+    top: 0;
+    border: 0;
+    z-index: 999;
+}
+.fork-me {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 0;
+}
+
+/** Copyright declaration */
+.post-copyright {
+    margin: 20px 10px 15px 0;
+    font-family: verdana, \9ED1\4F53, sans-serif;
+    background: #9ccbf1;
+    background: -moz-linear-gradient(-90deg, #6db0e6 0%, #8fbadd 4%, #9ccbf1 15%, #9ccbf1 100%);
+    background: -webkit-linear-gradient(-90deg, #6db0e6 0%, #8fbadd 4%, #9ccbf1 15%, #9ccbf1 100%);
+    background: -ms-linear-gradient(-90deg, #6db0e6 0%, #8fbadd 4%, #9ccbf1 15%, #9ccbf1 100%);
+    background: linear-gradient(-90deg, #6db0e6 0%, #8fbadd 4%, #9ccbf1 15%, #9ccbf1 100%);
+    border-top: 1px solid #65a5d8;
+    border-left: 1px solid #6db0e6;
+    border-right: 1px solid #6db0e6;
+    border-bottom: 1px solid #6db0e6;
+    border-radius: 3px 3px;
+}
+.post-copyright p {
+    padding: 0 8px;
+    line-height: 26px;
+    font-size: 12px;
+    color: #155b92;
+}
+.post-copyright p a {
+    color: #000;
+}
+.post-copyright p a:hover {
+    color: #000;
+}
