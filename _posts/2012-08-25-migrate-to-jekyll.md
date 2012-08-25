@@ -2,7 +2,9 @@
 layout: post
 title: Migrant to Jekyll
 description: First blog in Jekyll.
+categories: [program, jekyll]
 key: Jekyll, theme, Black Cube
+copyright: en
 ---
 
 I don't like Wordpress very much, so I migrant to Jekyll.
