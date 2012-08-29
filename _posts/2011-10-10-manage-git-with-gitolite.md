@@ -2,8 +2,8 @@
 layout: post
 title: 使用 gitolite 管理 git 配置库的权限
 description:  gitolite入门级文章.
-categories: [program, git]
-key: git, gitolite
+categories: git
+tags: [git, gitolite]
 copyright: cn
 ---
 

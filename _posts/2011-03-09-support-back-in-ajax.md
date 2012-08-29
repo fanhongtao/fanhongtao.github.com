@@ -2,8 +2,8 @@
 layout: post
 title: Ajax应用支持浏览器后退/前进
 description:  如何在使用Ajax的页面中实现对后退/前进支持.
-categories: [program, ajax]
-key: Ajax, 后退
+categories: ajax
+tags: [Ajax, 后退]
 copyright: cn
 ---
 

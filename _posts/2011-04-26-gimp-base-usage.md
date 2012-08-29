@@ -2,8 +2,8 @@
 layout: post
 title: GIMP使用
 description:  记录我所使用到的最基本的功能： 显示汉字 和 制作透明图片
-categories: [program, tool]
-key: GIMP
+categories: tool
+tags: GIMP
 copyright: cn
 ---
 GIMP 是 GNU 图像处理程序(GNU Image Manipulation Program)的缩写。包括几乎所有图象处理所需的功能，号称Linux下的PhotoShop。GIMP在Linux系统推出时就风靡了许多绘图爱好 者的喜爱，它的接口相当轻巧，但其功能却不输于专业的绘图软件；它提供了各种的影像处理工具、滤镜，还有许多的组件模块，对于要制作一个又酷又炫的网页按钮或网站Logo来说是一个非常方便好用的绘图软件，因为它也提供了许多的组件模块，你只要稍加修改一下，便可制作出一个属于你的网页按钮或网站 Logo。

@@ -2,8 +2,8 @@
 layout: post
 title: Migrant to Jekyll
 description: First blog in Jekyll.
-categories: [program, jekyll]
-key: Jekyll, theme, Black Cube
+categories: jekyll
+tags: [Jekyll, theme, Black Cube]
 copyright: en
 ---
 

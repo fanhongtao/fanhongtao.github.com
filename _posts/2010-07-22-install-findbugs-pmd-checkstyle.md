@@ -2,8 +2,8 @@
 layout: post
 title: Eclipse中使用Link方式安装静态检查插件
 description:  包括：CheckStyle、FindBugs 和 PMD插件
-categories: [program, eclipse]
-key: Eclipse, CheckStyle, FindBugs, PMD
+categories: eclipse
+tags: [Eclipse, CheckStyle, FindBugs, PMD]
 copyright: cn
 ---
 
