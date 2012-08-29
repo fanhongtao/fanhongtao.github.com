@@ -83,7 +83,7 @@ body                        { background: url(/images/body-bg.jpg) repeat 0 0; }
 .content-cnt .main-excerpt .date 
                             { font-style: italic; color: #888; }
 .content-cnt .main-excerpt-title 
-                            { font-size: 26px; font-family: Georgia; text-transform: uppercase; text-shadow: 1px 1px #FFFFFF; }
+                            { font-size: 26px; font-family: Georgia; text-shadow: 1px 1px #FFFFFF; }
 .content-cnt .main-excerpt p 
                             { font-size:  14px; margin-bottom: 10px; font-family: Georgia; color: #484848; }
 .content-cnt .main-excerpt p a                    
@@ -199,7 +199,7 @@ body                        { background: url(/images/body-bg.jpg) repeat 0 0; }
 .entry .code                { margin: 0 3px; padding: 0 3px; background: #a0a0a0; font: 12px Monaco,serif; color: #f8f8f8; border-radius: 2px 2px; }
 
 /** entry special **/
-.entry .title               { margin-bottom: 10px; font-family: Georgia; padding: 0 0; font-size: 26px; font-weight: 400; line-height: 32px; color: #383535; text-align: center; text-shadow: 1px 1px #FFFFFF; text-transform: uppercase; }
+.entry .title               { margin-bottom: 10px; font-family: Georgia; padding: 0 0; font-size: 26px; font-weight: 400; line-height: 32px; color: #383535; text-align: center; text-shadow: 1px 1px #FFFFFF; }
 .entry .meta                { text-align: center; color: #888; font-family: "Times New Roman",Times,serif; font-size: 13px; text-indent: 0; font-weight: 600; }
 .entry .meta .date          { color: #888; } .entry .meta .author { padding-right: 4px; }
 .entry .description         { padding: 8px 12px; font-style: italic; text-align: center; color: #888; text-indent: 0; border-top: 1px dashed #a0a0a0; border-bottom: 1px dashed #a0a0a0; }

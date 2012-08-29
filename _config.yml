@@ -1,11 +1,13 @@
 # standard jekyll configuration
 markdown:         rdiscount
 pygments:         true
-paginate:         4
+paginate:         4     //the number of post per page
+permalink:        /:year/:month/:day/:title.html
+safe:             true
+# auto:             true
 
 # configuration required for some pages
 title:            Fan's Blog
-# url:              http://www.pizn.me
 feed:             /atom.xml
 author:
     name:         Fan Hongtao
@@ -13,8 +15,6 @@ author:
 description:      "Fan's Blog"
 
 about: 			  "I am Fan Hongtao, a programmer working with Android."
-follow:
-    github:       https://github.com/fanhongtao
 
 blogName: 		  Fan's Blog
 blogDesc: 		  Program, Economy & Life.
