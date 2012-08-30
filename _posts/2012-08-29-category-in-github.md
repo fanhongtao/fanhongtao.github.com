@@ -26,24 +26,25 @@ Content of the post.
 Create a category.html in the _include directory
 
 {% highlight html %}
-{% raw %}
 <div class="box fn-clear">
 <h4>Category</h4>
 <ul>
-    {% for category in site.categories %}
-    <li><a href="/categories/{{ category | first }}/" title="view all posts">{{ category | first }} {{ category | last | size }}</a></li>
-    {% endfor %}
+    { % for category in site.categories %}
+    <li><a href="/categories/{ { category | first }}/" title="view all posts">{ { category | first }} { { category | last | size }}</a></li>
+    { % endfor %}
 </ul>
 </div>
-{% endraw %}
 {% endhighlight %}
+
+Please remove space 
+
+* between curly brace and percent sign
+* between two curly brace
 
 After that, include category.html in index.html
 
 {% highlight html %}
-{% raw %}
-{% include category.html %}
-{% endraw %}
+{ % include category.html %}
 {% endhighlight %}
 
 # 3. Create layout file for category index page
@@ -51,7 +52,6 @@ After that, include category.html in index.html
 Create file <b>category_index.html</b> in _layout directory.
 
 {% highlight html %}
-{% raw %}
 ---
 layout: default
 ---
@@ -59,18 +59,17 @@ layout: default
 	<div class="content-cnt fn-clear">
 		<div class="main fn-clear">
             <p><center><h3 class="main-excerpt-title">Category: {{ page.category }} </h3></center></p>
-			{% for post in site.categories.[page.category] %}
+			{ % for post in site.categories.[page.category] %}
             <article class="main-excerpt fn-clear">
-                <h3 class="main-excerpt-title"><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></h3>
-                <p class="date"><time pubdate="{{ post.date }}">{{ post.date | date_to_string }}</time></p>
-                <p>{{ post.description }}</p>
-                <p class="more"><a href="{{ post.url }}" title="Read More" rel="nofollow"><span>&#10149;</span>Read More</a></p>
+                <h3 class="main-excerpt-title"><a href="{ { post.url }}" title="{ { post.title }}" rel="bookmark">{ { post.title }}</a></h3>
+                <p class="date"><time pubdate="{ { post.date }}">{ { post.date | date_to_string }}</time></p>
+                <p>{ { post.description }}</p>
+                <p class="more"><a href="{ { post.url }}" title="Read More" rel="nofollow"><span>&#10149;</span>Read More</a></p>
             </article>
-            {% endfor %}
+            { % endfor %}
 		</div>
 	</div>
 </section>
-{% endraw %}
 {% endhighlight %}
 
  
@@ -88,12 +87,10 @@ touch categories/jekyll/index.html
 The content of <b>categories/jekyll/index.html</b> is:
 
 {% highlight html %}
-{% raw %}
 ---
 layout: category_index
 category: jekyll
 ---
-{% endraw %}
 {% endhighlight %}
 
 For short, we can execute the fellowing bash, create_category.sh, to create sub-directory & index file.
