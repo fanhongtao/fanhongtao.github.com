@@ -2,10 +2,10 @@
 layout: default
 ---
 <section class="content">
-	<div class="content-cnt fn-clear">
-		<div class="main fn-clear">
+    <div class="content-cnt fn-clear">
+        <div class="main fn-clear">
             <p><center><h3 class="main-excerpt-title">Category: {{ page.category }} </h3></center></p>
-			{% for post in site.categories.[page.category] %}
+            {% for post in site.categories.[page.category] %}
             <article class="main-excerpt fn-clear">
                 <h3 class="main-excerpt-title"><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></h3>
                 <p class="date"><time pubdate="{{ post.date }}">{{ post.date | date_to_string }}</time></p>
@@ -13,6 +13,6 @@ layout: default
                 <p class="more"><a href="{{ post.url }}" title="Read More" rel="nofollow"><span>&#10149;</span>Read More</a></p>
             </article>
             {% endfor %}
-		</div>
-	</div>
+        </div>
+    </div>
 </section>

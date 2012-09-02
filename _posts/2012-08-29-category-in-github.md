@@ -29,22 +29,17 @@ Create a category.html in the _include directory
 <div class="box fn-clear">
 <h4>Category</h4>
 <ul>
-    { % for category in site.categories %}
-    <li><a href="/categories/{ { category | first }}/" title="view all posts">{ { category | first }} { { category | last | size }}</a></li>
-    { % endfor %}
+    {{ '{%' }} for category in site.categories %}
+    <li><a href="/categories/{{ '{{' }} category | first }}/" title="view all posts">{{ '{{' }} category | first }} {{ '{{' }} category | last | size }}</a></li>
+    {{ '{%' }} endfor %}
 </ul>
 </div>
 {% endhighlight %}
 
-Please remove space 
-
-* between curly brace and percent sign
-* between two curly brace
-
 After that, include category.html in index.html
 
 {% highlight html %}
-{ % include category.html %}
+{{ '{%' }} include category.html %}
 {% endhighlight %}
 
 # 3. Create layout file for category index page
@@ -58,15 +53,15 @@ layout: default
 <section class="content">
 	<div class="content-cnt fn-clear">
 		<div class="main fn-clear">
-            <p><center><h3 class="main-excerpt-title">Category: {{ page.category }} </h3></center></p>
-			{ % for post in site.categories.[page.category] %}
+            <p><center><h3 class="main-excerpt-title">Category: {{ '{{' }} page.category }} </h3></center></p>
+			{{ '{%' }} for post in site.categories.[page.category] %}
             <article class="main-excerpt fn-clear">
-                <h3 class="main-excerpt-title"><a href="{ { post.url }}" title="{ { post.title }}" rel="bookmark">{ { post.title }}</a></h3>
-                <p class="date"><time pubdate="{ { post.date }}">{ { post.date | date_to_string }}</time></p>
-                <p>{ { post.description }}</p>
-                <p class="more"><a href="{ { post.url }}" title="Read More" rel="nofollow"><span>&#10149;</span>Read More</a></p>
+                <h3 class="main-excerpt-title"><a href="{{ '{{' }} post.url }}" title="{{ '{{' }} post.title }}" rel="bookmark">{{ '{{' }} post.title }}</a></h3>
+                <p class="date"><time pubdate="{{ '{{' }} post.date }}">{{ '{{' }} post.date | date_to_string }}</time></p>
+                <p>{{ '{{' }} post.description }}</p>
+                <p class="more"><a href="{{ '{{' }} post.url }}" title="Read More" rel="nofollow"><span>&#10149;</span>Read More</a></p>
             </article>
-            { % endfor %}
+            {{ '{%' }} endfor %}
 		</div>
 	</div>
 </section>
