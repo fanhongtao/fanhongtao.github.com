@@ -182,6 +182,7 @@ body                        { background: url(/images/body-bg.jpg) repeat 0 0; }
 .entry dl dd                { font-size: 13px; margin: 0; padding: 3px 0 0; }
 .entry blockquote           { border-left: 4px solid #e5e5e5; color: #555; line-height: 1.8em; margin: 0 0 1em 0; padding-left: 0.8em; }
 .entry table                { border-collapse: collapse; margin: 10px 0 10px; padding: 0; border-top: 2px solid #303030; border-bottom: 2px solid #303030; }
+.entry * th                 { background: #c3c3c3; }
 .entry * tr                 { background-color: #fff; border-top: 1px solid #d8d8d8; margin: 0; padding: 0; } 
 .entry * tr:nth-child(2n)   { background: #f8f8f8; }
 .entry * tr th, .entry * tr td 
