@@ -22,8 +22,12 @@ layout: default
             <div class="post-copyright">
                 {% if page.copyright == "cn" %}
                     {% include post-copyright-content-cn.html %}
-                {% else %}
+                {% elsif page.copyright == "en" %}
                     {% include post-copyright-content-en.html %}
+                {% elsif page.copyright == "book-cn" %}
+                    {% include post-copyright-book-cn.html %}
+                {% elsif page.copyright == "book-en" %}
+                    {% include post-copyright-book-en.html %}
                 {% endif %}
             </div>
             {% endif %}
