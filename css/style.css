@@ -277,3 +277,8 @@ body                        { background: url(/images/body-bg.jpg) repeat 0 0; }
 .post-copyright p a:hover {
     color: #000;
 }
+
+.img-300 {
+    width:300px;
+    height:auto;
+}
