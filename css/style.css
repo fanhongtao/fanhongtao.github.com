@@ -196,7 +196,7 @@ body                        { background: url(/images/body-bg.jpg) repeat 0 0; }
 .entry strong               { font-weight: 700; font-family: "Times New Roman",Times,serif; }
 .entry a                    { border-bottom: 1px dotted #686868; color: #454545; }
 .entry a:hover              { background: #e8e8e8; border-bottom: 1px solid #777; text-decoration: none; }
-.entry pre                  { background-color: #303030; border-left: 5px solid #1f1f1f; border-top: 1px solid #1f1f1f; border-right: 1px solid #1f1f1f; border-bottom: 1px solid #1f1f1f; font: 12px/1.5 Monaco,serif; margin: 10px 0 10px 0px; overflow:  auto; color: #e8e8e8; border-radius: 3px 3px 3px 3px; }
+.entry pre                  { background-color: #e8e8e8; border-left: 1px solid #1f1f1f; border-top: 1px solid #1f1f1f; border-right: 1px solid #1f1f1f; border-bottom: 1px solid #1f1f1f; font: 12px/1.5 Monaco,serif; margin: 10px 0 10px 0px; overflow:  auto; color: #303030; border-radius: 3px 3px 3px 3px; }
 .entry .code                { margin: 0 3px; padding: 0 3px; background: #a0a0a0; font: 12px Monaco,serif; color: #f8f8f8; border-radius: 2px 2px; }
 
 /** entry special **/
