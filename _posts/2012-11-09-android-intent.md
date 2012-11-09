@@ -1,5 +1,5 @@
 ---
-layout: post_without_comment
+layout: post
 title: Android Intent机制
 description:  
 categories: android
