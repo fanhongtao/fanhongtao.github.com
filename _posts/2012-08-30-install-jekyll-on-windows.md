@@ -94,9 +94,29 @@ pygments: true
 
 除了html之外，还可以支持其它的语言，如: bash, java, python 等，参考：[Available lexers][lexers]
 
-# 4. 参考资料
+# 4. 启动 Jekyll
 
-## 4.1 安装参考
+在 bash 窗口下执行以下命令启动Jekyll
+
+<pre>
+jekyll --server 
+</pre>
+
+如果启动时报错：
+
+<pre>
+jekyll invalid byte sequence in GBK
+</pre>
+
+则需要修改 .bashrc 文件， 添加以下内容
+
+<pre>
+export LANG=en_US.UTF-8
+</pre>
+
+# 5. 参考资料
+
+## 5.1 安装参考
 
 * [Development Kit](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit)
 * [使用Jekyll在Github上搭建博客](http://taberh.me/2011/12/26/use-Jekyll-build-Blog-on-Github.html)
@@ -106,7 +126,7 @@ pygments: true
 * [Static blogging the Jekyll way](http://recursive-design.com/blog/2010/10/12/static-blogging-the-jekyll-way/)
 * [How to get Pygments to work with Jekyll](http://www.stehem.net/2012/02/14/how-to-get-pygments-to-work-with-jekyll.html)
 
-## 4.2 写作时参考
+## 5.2 写作时参考
 
 可以使用[MarkdownPad](http://markdownpad.com/download/)来编写文本
 
