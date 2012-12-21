@@ -1,0 +1,44 @@
+---
+layout: post
+title: 搭建基于Eclipse的Android开发环境
+description:  这里只涉及开发Android应用，不涉及底层开发。内容包括Eclipse安装，ADT、Source等插件安装
+categories: android
+tags: [android, eclipse]
+copyright: cn
+---
+
+# 1 下载 Eclipse
+从 http://www.eclipse.org/downloads/ 下载最新的Eclipse版本。
+
+只需要下载标准版本的Eclipse （Eclipse Classic）就可以了。这里下载的是 eclipse-SDK-4.2.1-win32.zip 包
+
+修改字体：
+
+Perference -> General -> Appearance -> Colors and Fonts 
+
+Structured Text Editor -> Structured Text Editor Text Font ， 修改成 "Courier New 10"
+Java -> Java Editor Text Font ， 修改成 "Courier New 10"
+
+# 2 安装 Eclipse 插件
+
+进入 Eclipse， 通过菜单“Help” -> “Install New Software...” 打开安装插件的界面。
+
+点击“Add”按钮，
+分别输入
+
+* ADT Plugin
+* https://dl-ssl.google.com/android/eclipse/2
+
+See: http://developer.android.com/tools/sdk/eclipse-adt.html
+
+另外，还可以安装以下两个插件：
+
+* Android SDK Installer
+* http://adt-addons.googlecode.com/svn/trunk/installer/com.android.ide.eclipse.installer.update/
+
+* Android Sources
+* http://adt-addons.googlecode.com/svn/trunk/source/com.android.ide.eclipse.source.update/
+
+See: https://code.google.com/p/adt-addons/
+
+
