@@ -7,7 +7,7 @@ tags: [rapoo]
 copyright: en
 ---
 
-Last week, I ordered a Rapoo 9020 wireless optical combo from [Amazon](z.cn), and received express delivery on Monday.
+Last week, I ordered a Rapoo 9020 wireless optical combo from [Amazon](http://z.cn), and received express delivery on Monday.
 
 I choose it beacuse of:
 
