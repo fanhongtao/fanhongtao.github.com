@@ -40,6 +40,15 @@ gem uninstall jekyll
 gem uninstall liquid
 {% endhighlight %}
 
+删除时，可以通过 -v 参数指定所要删除的版本号。
+
+如果不删除，会出现诸如
+
+<pre>
+ Liquid error: undefined method `join' for ...
+</pre>
+
+这样的错误。
 
 # 3. 安装 Pygments 
 
@@ -61,6 +70,9 @@ easy_install Pygments
 参考下面的链接为Ruby打补丁，防止出现“Liquid error: bad file descriptor”错误。
 
 * [https://gist.github.com/1185645](https://gist.github.com/1185645)
+
+也可以直接下载我修改后的文件 [albino.rb](/attachments/albino.rb) 。注意：使用“另存为”来下载。
+
 
 ## 3.3 生成 css 文件
 
