@@ -19,4 +19,9 @@ copyright: cn
 而 Open Explorer 除了右键菜单外，还提供了一个toolbar按钮。
 
 
+# 2. Eclipse Memory Analyzer
+
+* 从 [http://www.eclipse.org/mat/downloads.php](http://www.eclipse.org/mat/downloads.php) 获取最新的[在线安装](/2012/02/19/install-eclipse-plugin.html)地址
+
+
 
