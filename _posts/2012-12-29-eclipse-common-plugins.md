@@ -23,5 +23,11 @@ copyright: cn
 
 * 从 [http://www.eclipse.org/mat/downloads.php](http://www.eclipse.org/mat/downloads.php) 获取最新的[在线安装](/2012/02/19/install-eclipse-plugin.html)地址
 
+# 3. m2eclipse 
+
+* [下载地址](http://www.sonatype.org/m2eclipse/)
+Maven插件。
+
+
 
 
