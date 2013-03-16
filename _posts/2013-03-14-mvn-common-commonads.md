@@ -2,8 +2,8 @@
 layout: post
 title: Maven入门
 description:  简介Maven的最简单的用法
-categories: java
-tags: [java, maven]
+categories: maven
+tags: [maven]
 copyright: cn
 ---
 
@@ -19,6 +19,8 @@ jar -xvf apache-maven-3.0.5-bin.zip
 解压后得到一个 apache-maven-3.0.5 目录。
 
 然后设置环境变量： M2_HOME, 取值为Maven的安装目录， d:\Java\Apache\apache-maven-3.0.5 
+
+最后将 $M2_HOME/bin 添加到环境变量 PATH 中。
 
 除了命令行方式之外，还可以在Eclipse中安装 [m2eclipse 插件](http://www.sonatype.org/m2eclipse/)。
 
@@ -49,11 +51,11 @@ Mavan依赖于一个名为 pom.xml 的文件来对项目进行管理，类似于
     </thead>
     <tbody>
         <tr><td>mvn archetype:generate</td><td>创建一个符合Maven约定的空工程</td></tr>
-		<tr><td>mvn clean</td><td>清除上一次构建所生成的文件</td></tr>
-		<tr><td>mvn compile</td><td>编译源码</td></tr>
-		<tr><td>mvn test</td><td>测试（包括编译源码、执行测试用例）</td></tr>
-		<tr><td>mvn install</td><td>将包安装到本地仓库，以便其它项目可以使用</td></tr>
-		<tr><td>mvn deploy</td><td>将包安装到远端仓库，以便其他开发人员可以使用</td></tr>
+        <tr><td>mvn clean</td><td>清除上一次构建所生成的文件</td></tr>
+        <tr><td>mvn compile</td><td>编译源码</td></tr>
+        <tr><td>mvn test</td><td>测试（包括编译源码、执行测试用例）</td></tr>
+        <tr><td>mvn install</td><td>将包安装到本地仓库，以便其它项目可以使用</td></tr>
+        <tr><td>mvn deploy</td><td>将包安装到远端仓库，以便其他开发人员可以使用</td></tr>
         <tr><td>mvn help:system</td><td>显示系统属性和环境变量</td></tr>
     </tbody>
 </table>
