@@ -57,6 +57,8 @@ Mavan依赖于一个名为 pom.xml 的文件来对项目进行管理，类似于
         <tr><td>mvn install</td><td>将包安装到本地仓库，以便其它项目可以使用</td></tr>
         <tr><td>mvn deploy</td><td>将包安装到远端仓库，以便其他开发人员可以使用</td></tr>
         <tr><td>mvn help:system</td><td>显示系统属性和环境变量</td></tr>
+        <tr><td>mvn javadoc:jar</td><td>创建工程对应的Java Doc包， *-javadoc.jar </td></tr>
+        <tr><td>mvn source:jar</td><td>创建源码包， *-sources.jar </td></tr>
     </tbody>
 </table>
 

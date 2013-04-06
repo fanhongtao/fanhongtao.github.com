@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Maven生命同期
+title: Maven生命周期
 description:  Maven的三个生命周期：clean、default和site。
 categories: maven
 tags: [maven]
