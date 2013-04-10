@@ -138,6 +138,7 @@ Maven仓库
             </releases>
             <snapshots>
                 <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
             </snapshots>
         </repository>
     </repositories>
@@ -150,9 +151,17 @@ Maven仓库
 * archiva.internal 的releases中的enable配置为true，表示可以从该仓库中获取发布版本。snapshots配置为false，表示不能获取快照版本。
 * archiva.snapshots 的releases中的enable配置为false，表示不能从该仓库中获取发布版本。snapshots配置为false，表示可以获取快照版本。
 
+updatePolicy 是从Maven远程仓库中更新构建的快照版本的频率，取值有：
+
+* always   每次构建时都检查更新
+* daily    每天检查更新一次（默认值）
+* interval:x  每X分钟检查更新一次
+* never     从不检查更新
+
 # 参考
 * [Introduction to Repositories](http://maven.apache.org/guides/introduction/introduction-to-repositories.html)
 * [Deploying to Repository][deploy]
+* [Maven Settings](http://maven.apache.org/ref/3.0.5/maven-settings/settings.html)
 
 [Achiva]: http://archiva.apache.org/
 [deploy]: http://archiva.apache.org/docs/1.4-M4-SNAPSHOT/userguide/deploy.html
