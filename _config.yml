@@ -8,7 +8,7 @@ auto:             true
 
 # configuration required for some pages
 title:            Fan's Blog
-url:              http://fanhongtao.github.com
+url:              http://fanhongtao.github.io
 feed:             /atom.xml
 author:
     name:         Fan Hongtao
