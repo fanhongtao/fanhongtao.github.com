@@ -17,12 +17,12 @@ copyright: cn
 
 # 2. 安装Jekyll
 
+从 [GitHub 的 Troubleshooting](https://help.github.com/articles/using-jekyll-with-pages#troubleshooting) 中找到 GitHub 当前所使用的 Jekyll 及其它部件版本。
+
 在bash窗口下执行
 
 {% highlight bash %}
-gem install jekyll -v 0.11.0
-gem install liquid -v 2.2.2
-gem install rdiscount kramdown
+gem install github-pages
 {% endhighlight %}
 
 然后就可以开始我们的Jekyll之旅了。
@@ -31,24 +31,12 @@ gem install rdiscount kramdown
 
 我就遇到过一次，在咨询 github 工作人员后才知道这一点。
 
-上面命令中的版本是我写本文时 github 所使用的版本。github所使用的版本情况可以在 [Using Jekyll with Pages][ujp] 中查看。
-
-通过 <code>gem list</code> 查看本地安装的版本，如果已经安装了其它版本的 jekyll 或 liquid, 可以通过如下命令删除
+为了确保与 GitHub 版本一致，可以通过以下命令对已经安装的 Jekyll 进行更新
 
 {% highlight bash %}
-gem uninstall jekyll
-gem uninstall liquid
+gem update github-pages
 {% endhighlight %}
 
-删除时，可以通过 -v 参数指定所要删除的版本号。
-
-如果不删除，会出现诸如
-
-<pre>
- Liquid error: undefined method `join' for ...
-</pre>
-
-这样的错误。
 
 # 3. 安装 Pygments 
 
@@ -111,7 +99,7 @@ pygments: true
 在 bash 窗口下执行以下命令启动Jekyll
 
 <pre>
-jekyll --server 
+jekyll serve
 </pre>
 
 如果启动时报错：
