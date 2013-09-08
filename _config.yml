@@ -5,7 +5,6 @@ paginate:         10     //the number of post per page
 permalink:        /:year/:month/:day/:title.html
 safe:             true
 lsi:              false
-auto:             true
 excerpt_separator: ""   # Workaround for http://blog.slaks.net/2013-08-09/jekyll-tag-was-never-closed
 
 # configuration required for some pages
