@@ -1,7 +1,7 @@
 # standard jekyll configuration
 markdown:         rdiscount
-pygments:         true
-paginate:         10     //the number of post per page
+highlighter:      pygments
+paginate:         10     # the number of post per page
 permalink:        /:year/:month/:day/:title.html
 safe:             true
 lsi:              false
