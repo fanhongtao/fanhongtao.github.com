@@ -9,21 +9,81 @@ copyright: cn
 
 # 1. 安装Ruby
 
-1. 从 [http://rubyinstaller.org/downloads/](http://rubyinstaller.org/downloads/) 下载最新的Ruby版本： [rubyinstaller-1.9.3-p194.exe](http://files.rubyforge.vm.bytemark.co.uk/rubyinstaller/rubyinstaller-1.9.3-p194.exe)
-和 [DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe](https://github.com/downloads/oneclick/rubyinstaller/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe)
-2. 执行 rubyinstaller-1.9.3-p194.exe， 假设安装在 c:\ruby193 目录， 安装时需要选择"Add Ruby executables to your PATH"
-3. 执行 DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe， 设置解压目录为 c:\RubyDevKit
-4. 进入 c:\RubyDevKit 目录，执行 ruby dk.rb init 和 ruby dk.rb install
-
-# 2. 安装Jekyll
-
-从 [GitHub 的 Troubleshooting](https://help.github.com/articles/using-jekyll-with-pages#troubleshooting) 中找到 GitHub 当前所使用的 Jekyll 及其它部件版本。
-
-在bash窗口下执行
-
+1. 在 [https://pages.github.com/versions/](https://pages.github.com/versions/) 查看所需要的Ruby版本，然后从 [http://rubyinstaller.org/downloads/](http://rubyinstaller.org/downloads/) 下载相应的 Ruby 及与之匹配的 Development Kit 。当前对应的版本是 [rubyinstaller-2.1.6-x64.exe](http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.1.6-x64.exe)
+和 [DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe](http://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe)
+2. 执行 rubyinstaller-2.1.6-x64.exe， 假设安装在 c:\Ruby21-x64 目录， 安装时需要选择"Add Ruby executables to your PATH"
+3. 执行 DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe， 设置解压目录为 c:\RubyDevKit
+4. 进入 c:\RubyDevKit 目录，执行以下两条命令
 {% highlight bash %}
-gem install github-pages
+ruby dk.rb init
+ruby dk.rb install
 {% endhighlight %}
+
+# 2. 安装 Bundler 及 Jekyll
+
+## 2.1 安装 Bundler
+
+先在bash窗口下执行以下命令来安装 Bundler 。
+{% highlight bash %}
+gem install bundler
+{% endhighlight %}
+
+由于国内网络访问的问题，该命令无法执行成功，提示
+
+<pre>
+fht@FHT-THINK /c/Ruby21-x64
+$ gem install bundler -v 1.10.5
+ERROR:  Could not find a valid gem 'bundler' (= 1.10.5), here is why:
+          Unable to download data from https://rubygems.org/ - Errno::ECONNRESET
+: An existing connection was forcibly closed by the remote host. - SSL_connect (
+https://api.rubygems.org/quick/Marshal.4.8/bundler-1.10.5.gemspec.rz)
+ERROR:  Possible alternatives: bundler
+
+fht@FHT-THINK /c/Ruby21-x64
+$ gem install bundler -v 1.10.5
+ERROR:  Could not find a valid gem 'bundler' (= 1.10.5), here is why:
+          Unable to download data from https://rubygems.org/ - Errno::ETIMEDOUT:
+ A connection attempt failed because the connected party did not properly respon
+d after a period of time, or established connection failed because connected hos
+t has failed to respond. - connect(2) for "s3.amazonaws.com" port 443 (https://a
+pi.rubygems.org/specs.4.8.gz)
+
+</pre>
+
+除了考虑翻墙之外，还可以通过将 source 指向国内的网址来实现下载。
+ 
+<pre>
+fht@FHT-THINK /c/Ruby21-x64
+$ gem source
+*** CURRENT SOURCES ***
+
+https://rubygems.org/
+
+fht@FHT-THINK /c/Ruby21-x64
+$ gem sources --remove https://rubygems.org/
+https://rubygems.org/ removed from sources
+
+fht@FHT-THINK /c/Ruby21-x64
+$ gem sources -a http://ruby.taobao.org/
+http://ruby.taobao.org/ added to sources
+</pre>
+
+上面的命令集中，先查看当前已有的 source，然后删除国外的网址，最后指定为国内的网址。
+
+## 2.2 安装 Jekyll
+
+创建一个名为 Gemfile 的文本文件，文件的内容为
+
+<pre>
+source 'http://ruby.taobao.org/'
+gem 'github-pages'
+</pre>
+
+然后执行以下命令安装 Jekyll 相关的组件
+
+<pre>
+bundle install
+</pre>
 
 然后就可以开始我们的Jekyll之旅了。
 
@@ -34,7 +94,7 @@ gem install github-pages
 为了确保与 GitHub 版本一致，可以通过以下命令对已经安装的 Jekyll 进行更新
 
 {% highlight bash %}
-gem update github-pages
+bundle update
 {% endhighlight %}
 
 
@@ -79,18 +139,17 @@ pygmentize -S default -f html > css/pygments.css
 ## 3.4 配置 _config.yaml文件
 在 _config.yaml 文件中增加 
 <pre>
-pygments: true 
+highlighter:      pygments
 </pre>
-表示生成Blog页面时，需要使用到Pygments
+表示生成Blog页面时，使用 Pygments 来进行高亮显示。
 
 ## 3.5 使用
 在 Blog 文件中将代码写在 highlight 和 endhighlight 之间，如：
 <pre>
-{ % highlight html %}
-在这里写HTML代码片段
-{ % endhighlight %}
+{{"{%"}} highlight html %}
+   在这里写HTML代码片段
+{{"{%"}} endhighlight %}
 </pre>
-注意：使用时需要删除 { 和 % 之间的空格。
 
 除了html之外，还可以支持其它的语言，如: bash, java, python 等，参考：[Available lexers][lexers]
 
@@ -99,7 +158,7 @@ pygments: true
 在 bash 窗口下执行以下命令启动Jekyll
 
 <pre>
-jekyll serve
+bundle exec jekyll serve
 </pre>
 
 如果启动时报错：
@@ -119,12 +178,9 @@ export LANG=en_US.UTF-8
 ## 5.1 安装参考
 
 * [Development Kit](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit)
-* [使用Jekyll在Github上搭建博客](http://taberh.me/2011/12/26/use-Jekyll-build-Blog-on-Github.html)
-* [像黑客一样写博客——Jekyll入门](http://www.soimort.org/tech-blog/2011/11/19/introduction-to-jekyll_zh.html)
 * [How to use GitHub Pages on Windows](http://bradleygrainger.com/2011/09/07/how-to-use-github-pages-on-windows.html)
 * [Using Jekyll with Pages][ujp]
 * [Static blogging the Jekyll way](http://recursive-design.com/blog/2010/10/12/static-blogging-the-jekyll-way/)
-* [How to get Pygments to work with Jekyll](http://www.stehem.net/2012/02/14/how-to-get-pygments-to-work-with-jekyll.html)
 
 ## 5.2 写作时参考
 
