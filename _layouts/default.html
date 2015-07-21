@@ -1,39 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-  <meta name="generator" content="Jekyll" />
-  <meta name="author" content="{{ site.author.name }}" />
-  {% if page.description %}
-  <meta name="description" content="{{ page.description }}" />
-  {% endif %}
-  <link rel="stylesheet" href="/css/style.css" type="text/css" />
-  <link rel="stylesheet" href="/css/pygments.css" type="text/css" />
-  <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
-  <link rel="shortcut icon" href="/favicon.png" type="image/png" />
-  <script>
-  (function() {
-    var cx = '015994199171737318560:lu0dt9txvlq';
-    var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.com/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
-  })();
-  </script>
-</head>
-<body>
-    {% include head.html %} 
-    <section id="content">
-        <article id="contenter">
-            {{ content }}
-        </article>
-    </section>
-    {% include foot.html %}
-    {% if site.github %}
-        <a class="fork-me" href="http://github.com/{{ site.github.username }}" target="_blank" rel="nofollow">
-            <img src="/images/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
-        </a>
-    {% endif %}
-</body>
+  {% include head.html %}
+
+  <body>
+    {% include header.html %}
+
+    <div id="main" class="container main">
+      {{ content }}
+    </div>
+
+    <div id="back-top">
+      <a href="javascript:;" title="回到顶部">
+        <div class="arrow"></div>
+        <div class="stick"></div>
+      </a>
+    </div>
+
+    {% include footer.html %}
+  </body>
 </html>

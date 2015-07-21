@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<section id="myArticle" class="col-sm-9">
+    <div class="page-header">
+      <h1>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
+    </div>
+
+    {{ content }}
+</section>
+
+<aside id="sidebar" class="col-sm-3 hidden-xs">
+    {% include qrcode.html %}
+</aside>

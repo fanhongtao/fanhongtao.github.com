@@ -1,5 +1,5 @@
 # standard jekyll configuration
-markdown:         rdiscount
+markdown:         kramdown
 highlighter:      pygments
 paginate:         10     # the number of post per page
 permalink:        /:year/:month/:day/:title.html
@@ -9,19 +9,15 @@ excerpt_separator: ""   # Workaround for http://blog.slaks.net/2013-08-09/jekyll
 
 # configuration required for some pages
 title:            Fan's Blog
-url:              http://fanhongtao.github.io
-feed:             /atom.xml
+description:      以经济的眼光观察世界
 author:
     name:         Fan Hongtao
     email:        fanhongtao@gmail.com
-description:      "Fan's Blog"
-
-about: 			  "I am Fan Hongtao, an independent investor."
-
-blogName: 		  Fan's Blog
-blogDesc: 		  Economy & Life.
 
 # configuration for ehancements, uncomment to enable
 github:
     username: fanhongtao
 
+categories_path: category.html
+tags_path: tag.html
+# rss_path: feed.xml

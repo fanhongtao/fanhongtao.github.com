@@ -1,0 +1,13 @@
+{% if page.copyright %}
+<div class="post-copyright">
+    {% if page.copyright == "cn" %}
+        <p>声明: 本文采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank" title="知识共享署名-非商业性使用-相同方式共享">CC BY-NC-SA 3.0</a> 协议进行授权，转载请注明出处。</p>
+    {% elsif page.copyright == "en" %}
+        <p>This article is released under <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank" title="Attribution-NonCommercial-ShareAlike">CC BY-NC-SA 3.0</a> license.</a></p>
+    {% elsif page.copyright == "book-cn" %}
+        <p>声明: 本文仅是我的电子版读书笔记，所有版权归书原作者</p>
+    {% elsif page.copyright == "book-en" %}
+        <p>This article is my e-reading-note, all copyright belongs to author of book.</p>
+    {% endif %}
+</div>
+{% endif %}

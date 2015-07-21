@@ -1,20 +1,25 @@
-<header class="head">
-	<div class="header fn-clear">
-		<section class="header-cnt fn-clear">
-			<div class="logo">
-				<div class="logo-cnt">
-				 	<h1><a href="/">{{ site.blogName }}</a></h1>
-				 	<h2>{{ site.blogDesc }}</h2>
-				</div>
-			</div>
-			<nav class="nav">
-				<ul>
-					<li><a href="/" >Home</a></li>
-					<li><a href="/archives.html" >Archives</a></li>
-					<li><a href="/contact.html" >About & Contact</a></li>
-					<li><a href="/atom.xml" target="_blank" >Rss</a></li>
-				</ul>
-			</nav>
-		</section>
-	</div>
-</header>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="author" content="{{ site.author.name }}" />
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="/favicon.png" type="image/png">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+    <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/fontawesome/4.2.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/assets/blog-theme/css/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="{{ "/assets/blog-theme/css/index.css" | prepend: site.baseurl }}">
+    <script type="text/javascript" src="{{"/assets/blog-theme/js/index.js" | prepend:site.baseurl}}"></script>
+</head>
