@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 在Eclipse中导出Android apk文件
-categories: android
+categories: programming
 tags: [android, eclipse]
 copyright: cn
 ---

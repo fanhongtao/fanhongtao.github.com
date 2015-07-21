@@ -2,7 +2,7 @@
 layout: post
 title: Ant中访问环境变量
 description:  在Ant脚本中如何访问环境变量？
-categories: ant
+categories: software
 tags: [ant]
 copyright: cn
 ---

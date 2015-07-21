@@ -2,10 +2,13 @@
 layout: post
 title: Eclipse中使用Link方式安装静态检查插件
 description:  包括：CheckStyle、FindBugs 和 PMD插件
-categories: eclipse
-tags: [Eclipse, CheckStyle, FindBugs, PMD]
+categories: software
+tags: [eclipse]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 ## 1 现状
 写的Java代码需要使用 CheckStyle、FindBugs 和 PMD 进行静态检查。而大多数开发人员都使用Eclipse进行开发，所以最好的办法是使用这三个工具的Eclipse插件。
@@ -36,6 +39,7 @@ Eclipse提供了Link方式安装插件的功能，通过将插件和Eclipse版�
 4. 如果不想使用某个插件，可以将对应的 .link 文件移出 links 目录，再重启 Eclipse。（所以还是每个文件一行比较好管理）
 
 ## 3 安装插件
+
 ### 3.1 CheckStyle插件
 除了按照一般的操作步骤安装完成之后，还可以再进一步：将项目组统一的配置项 checkstyle_ruleset_xxx.xml 作为该插件的首选项。
 

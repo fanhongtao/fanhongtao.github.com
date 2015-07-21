@@ -2,10 +2,13 @@
 layout: post
 title: ProGuard使用Guava的Andriod项目
 description:  一个Android项目，如果使用了Google的Guava，需要怎么配置才能正确使用ProGuard
-categories: android
+categories: programming
 tags: [android, guava, proguard]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 # 1 额外的Jar包
 

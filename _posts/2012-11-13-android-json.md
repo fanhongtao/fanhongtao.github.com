@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JSON
-categories: java
+categories: programming
 tags: [java, json]
 copyright: cn
 ---
@@ -41,6 +41,7 @@ JSON(/ˈdʒeɪsən/, JavaScript Object Notation) 是一种轻量级的数据交�
 # JSON库
 
 在[JSON官网]列举了常见各种语言的JSON解析库，以Java为例，常见的有
+
 * [GSON][]
 * [Jackson JSON][]
 * [Fast JSON][] , 一个中国人写的开源版本

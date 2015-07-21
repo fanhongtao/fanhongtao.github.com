@@ -2,10 +2,13 @@
 layout: post
 title: Maven仓库
 description:  Maven是如何组织构件的
-categories: maven
+categories: software
 tags: [maven]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 # 1. 仓库简介
 
@@ -56,7 +59,7 @@ Maven仓库
 
 这里主要是以[Apache Achiva][Achiva]为例，讲如何将一个构件部署到自己搭建的内部仓库中。
 
-# 2.1 配置远端仓库的认证信息
+## 2.1 配置远端仓库的认证信息
 
 为了将构建部署到远端仓库，需要在 .m2/settings.xml 中配置远端仓库的认证信息。
 
@@ -81,7 +84,7 @@ Maven仓库
 
 上面配置了两个仓库的信息，archiva.internal用于部署发布版本，archiva.snapshots则用于部署快照版本。
 
-# 2.2 在 pom.xml中配置distributionManagement
+## 2.2 在 pom.xml中配置distributionManagement
 
 在所要部署的项目的 pom.xml 中配置 distributionManagement 元素。所配置的 id 必须是在 settings.xml 中已有的 id.
 
@@ -108,7 +111,7 @@ Maven仓库
 
 通过命令： <b>mvn clean deploy</b> 将构件部署到内部仓库。
 
-# 2.3 使用内部仓库中的构件
+## 2.3 使用内部仓库中的构件
 
 一个工程需要使用内部仓库上的构件时，需要在该工程的 pom.xml 中配置内部工程的地址，及所依赖的构件信息。
 

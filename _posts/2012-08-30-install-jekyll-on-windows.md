@@ -2,10 +2,13 @@
 layout: post
 title: 在Windows下安装Jekyll
 description: 记录我的安装过程。
-categories: jekyll
-key: Jekyll, Windows
+categories: software
+tags: jekyll
 copyright: cn
 ---
+
+* content
+{:toc}
 
 # 1. 安装Ruby
 

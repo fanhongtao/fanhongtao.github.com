@@ -3,10 +3,12 @@ layout: post
 title: 开启Cygwin的SSH服务
 description: 安装 Cygwin，开启SSH服务，将Windows机器模拟成一台Linux服务器。
 categories: computer
-tags: [Windows, Cygwin, SSH]
+tags: [windows, cygwin, ssh]
 copyright: cn
 ---
 
+* content
+{:toc}
 
 # 1. 安装 Cygwin
 
@@ -147,7 +149,7 @@ sc start sshd
 
 # 6. 验证 SSH
 
-从 [PuTTY下载页面]((http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) )下载 [putty.zip](http://the.earth.li/~sgtatham/putty/latest/x86/putty.zip) ，解压后运行 putty.exe 
+从 [PuTTY下载页面](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)下载 [putty.zip](http://the.earth.li/~sgtatham/putty/latest/x86/putty.zip) ，解压后运行 putty.exe 
 
 在“Host Name(or IP address)”中输入“localhost” ，按回车，进入登录页面，输入 Windows 的用户名、密码。正常的话，就应该可以看到登录成功的提示符。
 

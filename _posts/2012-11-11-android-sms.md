@@ -1,12 +1,15 @@
 ---
 layout: post
 title: Android SMS
-categories: android
+categories: programming
 tags: [android, sms, mms]
 copyright: cn
 ---
 
-# 1 基本原理
+* content
+{:toc}
+
+# 0 基本原理
 
 SMS： 短信 Short Message Service
 
@@ -22,20 +25,20 @@ Android通过 [MmsSmsDatabaseHelper.java][] 来管理SMS 和 MMS，通过查看�
 static final int DATABASE_VERSION = 55;
  
 db.execSQL("CREATE TABLE sms (" +
-		   "_id INTEGER PRIMARY KEY," +
-		   "thread_id INTEGER," +   // 会话的序号，同一发信人的id相同
-		   "address TEXT," +     // 发件人手机号码
-		   "person INTEGER," +   // 联系人列表里的序号，0表示陌生人
-		   "date INTEGER," +     // 发件日期
-		   "date_sent INTEGER DEFAULT 0," +
-		   "protocol INTEGER," +  // 协议，分为： 0 SMS_RPOTO, 1 MMS_PROTO
-		   "read INTEGER DEFAULT 0," +  // 是否阅读 0未读， 1已读
-		   "status INTEGER DEFAULT -1," + // a TP-Status value
-										  // or -1 if it
-										  // status hasn't
-										  // been received
-										  // 状态 -1接收，0 complete, 64 pending, 128 failed 
-		   "type INTEGER," +   // 取值： 
+           "_id INTEGER PRIMARY KEY," +
+           "thread_id INTEGER," +   // 会话的序号，同一发信人的id相同
+           "address TEXT," +     // 发件人手机号码
+           "person INTEGER," +   // 联系人列表里的序号，0表示陌生人
+           "date INTEGER," +     // 发件日期
+           "date_sent INTEGER DEFAULT 0," +
+           "protocol INTEGER," +  // 协议，分为： 0 SMS_RPOTO, 1 MMS_PROTO
+           "read INTEGER DEFAULT 0," +  // 是否阅读 0未读， 1已读
+           "status INTEGER DEFAULT -1," + // a TP-Status value
+                                          // or -1 if it
+                                          // status hasn't
+                                          // been received
+                                          // 状态 -1接收，0 complete, 64 pending, 128 failed 
+           "type INTEGER," +   // 取值： 
                                //   ALL    = 0;
                                //   INBOX  = 1;
                                //   SENT   = 2;
@@ -43,14 +46,14 @@ db.execSQL("CREATE TABLE sms (" +
                                //   OUTBOX = 4;
                                //   FAILED = 5;
                                //   QUEUED = 6;
-		   "reply_path_present INTEGER," +
-		   "subject TEXT," +   // 短信的主题
-		   "body TEXT," +      // 短信内容
-		   "service_center TEXT," +  // 短信中心号码
-		   "locked INTEGER DEFAULT 0," +
-		   "error_code INTEGER DEFAULT 0," +
-		   "seen INTEGER DEFAULT 0" +
-		   ");");
+           "reply_path_present INTEGER," +
+           "subject TEXT," +   // 短信的主题
+           "body TEXT," +      // 短信内容
+           "service_center TEXT," +  // 短信中心号码
+           "locked INTEGER DEFAULT 0," +
+           "error_code INTEGER DEFAULT 0," +
+           "seen INTEGER DEFAULT 0" +
+           ");");
 {% endhighlight %}
 注意： 数据库中的 INTEGER 对应到Java的 Long 类型。
 
@@ -118,7 +121,7 @@ Cursor cursor = managedQuery(uri, projection, null, null, "sms.date desc");
 * "sms.date as date" : 查询最后一条短信的日期
 * "sms.date desc" : 会话降序排序
 
-## 获取短信的联系人
+## 3.2 获取短信的联系人
 
 虽然sms表中有person字段，但如果是先接收到短信再将陌生人添加到联系人列表，则person仍然是为0。所以不能依赖 person 字段，只能通过 address 去查询联系人。
 

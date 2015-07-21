@@ -2,10 +2,13 @@
 layout: post
 title: 保持ListView的滚动位置
 description:  跳转到其它Activity，又退回到ListView所在Activity时，如何保持ListView的滚动位置？
-categories: android
+categories: programming
 tags: [android, listview]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 使用ListView时，经常会有有这样场景：
 

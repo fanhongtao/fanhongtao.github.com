@@ -2,10 +2,13 @@
 layout: post
 title: Maven依赖机制
 description:  Maven是如何引用第三方构件的？
-categories: maven
+categories: software
 tags: [maven]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 # 1. 依赖基本配置
 当项目依赖于一个第三方Jar包时，需要在 pom.xml 文件中进行如下配置（以JUnit为例进行说明）：
@@ -68,6 +71,7 @@ There is no limit to the number of levels that dependencies can be gathered from
 * 可选依赖（Optional dependencies）：If project Y depends on project Z, the owner of project Y can mark project Z as an optional dependency, using the "optional" element. When project X depends on project Y, X will depend only on Y and not on Y's optional dependency Z. The owner of project X may then explicitly add a dependency on Z, at her option. (It may be helpful to think of optional dependencies as "excluded by default.")
 
 # 3. 依赖仲裁
+
 ## 3.1 “最短路径”（nearest definition）
 
 假设存在以下两个不同的依赖路径：
@@ -103,6 +107,7 @@ Maven通过“最短路径”来解决此类冲突。在第一个依赖关系中
 * import : This scope is only used on a dependency of type pom in the <dependencyManagement> section. It indicates that the specified POM should be replaced with the dependencies in that POM's <dependencyManagement> section. Since they are replaced, dependencies with a scope of import do not actually participate in limiting the transitivity of a dependency.
 
 Each of the scopes (except for import) affects transitive dependencies in different ways, as is demonstrated in the table below. If a dependency is set to the scope in the left column, transitive dependencies of that dependency with the scope across the top row will result in a dependency in the main project with the scope listed at the intersection. If no scope is listed, it means the dependency will be omitted.
+
 <table width="100%">
     <thead>
         <tr><th width="20%"></th><th width="20%">compile</th><th width="20%">provided</th><th width="20%">runtime</th><th width="20%">test</th></tr>

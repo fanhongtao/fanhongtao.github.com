@@ -2,7 +2,7 @@
 layout: post
 title: 访问WebApp之外的资源
 description:  如何配置才能在Tomcat中访问WebApp之外的资源，如：外部音视频文件。
-categories: tomcat
+categories: software
 tags: [tomcat]
 copyright: cn
 ---

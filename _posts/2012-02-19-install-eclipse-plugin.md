@@ -2,7 +2,7 @@
 layout: post
 title: Eclipse在线安装软件
 description:  在线安装Eclipse插件
-categories: eclipse
+categories: software
 tags: [eclipse]
 copyright: cn
 ---

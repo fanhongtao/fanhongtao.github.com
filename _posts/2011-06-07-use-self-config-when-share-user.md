@@ -2,7 +2,7 @@
 layout: post
 title: 共用Linux用户时使用自己的配置
 description:  在与他人共用一个Linux用户时，如何使用自己的环境变量
-categories: linux
+categories: software
 tags: [linux]
 copyright: cn
 ---

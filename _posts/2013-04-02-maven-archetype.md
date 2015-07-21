@@ -2,10 +2,13 @@
 layout: post
 title: Maven Archetype
 description:  Maven Archetype插件常见用法。
-categories: maven
+categories: software
 tags: [maven]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 # 1. 简介
 

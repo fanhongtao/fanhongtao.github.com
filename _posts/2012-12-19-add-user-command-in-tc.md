@@ -1,10 +1,13 @@
 ---
 layout: post
 title: Total Commander中添加自定义命令
-categories: tool
+categories: software
 tags: [tool]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 下面以在TC 8.0创建一个用于打开 msysgit 的 Bash 窗口的命令为例进行说明。
 

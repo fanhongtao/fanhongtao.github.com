@@ -1,10 +1,14 @@
 ---
 layout: post
 title: 使用ActivityGroup管理Activity
-categories: android
+categories: programming
 tags: [android]
 copyright: cn
 ---
+
+* content
+{:toc}
+
 虽然从Android 3.0（android-11）开始就建议使用Fragment、FragmentManager来替代ActivityGroup，但毕竟老版本还有很大的市场，一时半会不会选择那么高的版本，还得用ActivityGroup。
 
 下面以一个简单的例子说明应该如何通过ActivityGroup来管理Activity。程序截图：
@@ -116,8 +120,10 @@ public class Group1 extends ActivityGroup {
 2、新的Activity以 FLAG_ACTIVITY_SINGLE_TOP 方式打开，这样在子Activity之间切换时可以复用已有的Activity实例，不用重新创建。
 
 # 3 编写子Activity
+
 ## 3.1 View1
-### 布局
+
+### 3.1.1 布局
 
 在View1中，显示了一个TextView和一个EditText。
 
@@ -141,7 +147,7 @@ public class Group1 extends ActivityGroup {
 </LinearLayout>
 {% endhighlight %}
 
-### 代码
+### 3.1.2 代码
 {% highlight java %}
 public class View1 extends Activity {
     private EditText editText;
@@ -161,7 +167,8 @@ public class View1 extends Activity {
 {% endhighlight %}
 
 ## 3.2  View2
-### 布局
+
+### 3.2.1 布局
 
 在View2中，显示了一个TextView和一个ListView。
 
@@ -184,7 +191,7 @@ public class View1 extends Activity {
 </LinearLayout>
 {% endhighlight %}
 
-### 代码
+### 3.2.2 代码
 
 {% highlight xml %}
 public class View2  extends Activity {

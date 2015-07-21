@@ -2,10 +2,13 @@
 layout: post
 title: Maven生命周期
 description:  Maven的三个生命周期：clean、default和site。
-categories: maven
+categories: software
 tags: [maven]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 # 1. 简介
 

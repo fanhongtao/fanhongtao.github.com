@@ -1,10 +1,13 @@
 ---
 layout: post
 title: AsyncTask
-categories: android
+categories: programming
 tags: [android, json]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 Android 中的 AsyncTask 可以比较容易实现异常操作，
 

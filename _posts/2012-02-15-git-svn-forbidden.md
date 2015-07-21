@@ -2,8 +2,8 @@
 layout: post
 title: msysgit 使用 svn 命令时遇到 Forbidden 错误
 description:  在 msysgit 中如何下载路径中包含汉字的 SVN 库
-categories: git
-tags: [git, msysgit, svn]
+categories: software
+tags: [git]
 copyright: cn
 ---
 

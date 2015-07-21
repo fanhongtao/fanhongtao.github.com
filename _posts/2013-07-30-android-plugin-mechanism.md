@@ -2,10 +2,13 @@
 layout: post
 title: Android的插件机制
 description:  Android下几种不同不同层次的插件介绍
-categories: android
+categories: programming
 tags: [android, plugin]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 # 什么是插件
 

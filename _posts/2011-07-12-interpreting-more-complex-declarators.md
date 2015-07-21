@@ -2,9 +2,12 @@
 layout: post
 title: Interpreting More Complex Declarators
 author: <a href="http://microsoft.com">Microsoft</a>
-categories: c
+categories: programming
 tags: [c]
 ---
+
+* content
+{:toc}
 
 # Explanation
 

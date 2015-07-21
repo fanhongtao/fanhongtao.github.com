@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Total Commander中添加工具栏按钮
-categories: tool
+categories: software
 tags: [tool]
 copyright: cn
 ---

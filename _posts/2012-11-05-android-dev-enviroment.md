@@ -2,10 +2,13 @@
 layout: post
 title: 搭建基于Eclipse的Android开发环境
 description:  这里只涉及开发Android应用，不涉及底层开发。内容包括Eclipse安装，ADT、Source等插件安装
-categories: android
+categories: programming
 tags: [android, eclipse]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 # 1 下载 Eclipse
 从 http://www.eclipse.org/downloads/ 下载最新的Eclipse版本。

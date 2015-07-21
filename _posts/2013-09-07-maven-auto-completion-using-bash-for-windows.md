@@ -2,8 +2,8 @@
 layout: post
 title: 配置 Windows下 Maven 命令行自动补全功能
 description:  基于 Mingw 的Bash
-categories: maven
-tags: [maven, auto, completion, bash]
+categories: software
+tags: [maven, bash]
 copyright: cn
 ---
 

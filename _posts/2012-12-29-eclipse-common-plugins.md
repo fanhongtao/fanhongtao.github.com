@@ -2,10 +2,13 @@
 layout: post
 title: Eclipse 中常用插件
 description:  记录我常用的插件
-categories: eclipse
+categories: software
 tags: [eclipse]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 # 1. Open Explorer
 

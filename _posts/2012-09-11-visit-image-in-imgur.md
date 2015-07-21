@@ -2,7 +2,7 @@
 layout: post
 title: Visit Images In Imgur
 description:  How to visit images in imgur by a Python script.
-categories: jekyll
+categories: software
 tags: [jekyll, python]
 copyright: en
 ---

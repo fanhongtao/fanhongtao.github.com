@@ -2,10 +2,13 @@
 layout: post
 title: Maven 插件： Dependency
 description:  Maven Dependency 插件常见用法。
-categories: maven
-tags: [maven, dependency]
+categories: software
+tags: [maven]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 # 1. 简介
 

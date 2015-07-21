@@ -2,10 +2,13 @@
 layout: post
 title: Maven坐标
 description:  Maven是如何唯一标识一个构件的
-categories: maven
+categories: software
 tags: [maven]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 # 1. Maven坐标
 一个最简单的pom.xml示例：

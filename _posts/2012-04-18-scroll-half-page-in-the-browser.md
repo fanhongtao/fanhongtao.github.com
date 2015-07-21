@@ -2,7 +2,7 @@
 layout: post
 title: Scroll half page in the browser with AHK
 description:  An AutoHotKey skill
-categories: tool
+categories: software
 tags: [tool, autohotkey]
 copyright: en
 ---

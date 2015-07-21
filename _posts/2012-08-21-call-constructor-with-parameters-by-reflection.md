@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Call constructor with parameters by reflection
-categories: java
+categories: programming
 tags: [java]
 copyright: en
 ---

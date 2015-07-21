@@ -2,10 +2,13 @@
 layout: post
 title: Ajax应用支持浏览器后退/前进
 description:  如何在使用Ajax的页面中实现对后退/前进支持.
-categories: ajax
-tags: [Ajax, 后退]
+categories:  programming
+tags: [ajax]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 ## 1	问题引入
 Ajax有很多好处，可以
@@ -88,7 +91,7 @@ a {color: #0000FF; text-decoration:none}
 a:hover {color: #FF0000}    /* 当有鼠标悬停在链接上 */
 {% endhighlight %}
 
-## 3.3 ajax1.jsp
+### 3.3 ajax1.jsp
 
 {% highlight jsp %}
 <%@ page language="java" contentType="text/html; charset=UTF-8"

@@ -2,7 +2,7 @@
 layout: post
 title: 融资融券
 categories: economy
-tags: [economy]
+tags: [证券]
 copyright: cn
 ---
 

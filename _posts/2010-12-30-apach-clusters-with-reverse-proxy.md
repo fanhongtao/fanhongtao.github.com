@@ -1,10 +1,13 @@
 ---
 layout: post
 title: 利用apache反向代理功能实现负载均衡的集群
-categories: apache
-tags: [apache, 反向代理, 集群]
+categories: software
+tags: [apache]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 # 1 目标组网
 

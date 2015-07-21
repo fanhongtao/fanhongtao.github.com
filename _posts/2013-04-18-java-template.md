@@ -1,10 +1,13 @@
 ---
 layout: post
 title: Java中的模板
-categories: java
+categories: programming
 tags: [java]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 从Java 5 (Tiger) 开始，就支持了泛型（模板）。
 
@@ -43,7 +46,7 @@ public <T extends Comparable<T>> T max(T first, T second) {
 
 # 3. 技巧
 
-# 3.1 定义一个返回子类对象的函数
+## 3.1 定义一个返回子类对象的函数
 
 通常情况下，定义一个类时，如果想要返回自身，我们是返回 this ，但如果想要返回子类对象，而又不想让调用者进行类型转换的话，则需要使用一点技巧。
 

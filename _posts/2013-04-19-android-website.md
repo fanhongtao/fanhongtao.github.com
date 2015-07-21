@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Android 相关的网站
-categories: android
+categories: programming
 tags: [android]
 copyright: cn
 ---

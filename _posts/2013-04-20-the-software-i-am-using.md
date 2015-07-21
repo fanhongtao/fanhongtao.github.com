@@ -2,10 +2,13 @@
 layout: post
 title: 我所使用的软件
 description:  记录我使用软件的名称，简单说明，下载地址。
-categories: tool
+categories: software
 tags: [tool]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 # 开发/编辑工具
 
@@ -15,7 +18,7 @@ copyright: cn
 * [msysgit](http://msysgit.github.io/) : Windows下的Git客户端，用于版本管理
 * [Microsoft Office](http://office.microsoft.com/zh-cn/) : 微软的Office软件。中国的个人用户可以考虑在[亚马逊](http://z.cn)上购买“Office 2010家庭和学生版三用户”，398元，可以装3台电脑。
 * [NotePad++](http://notepad-plus-plus.org/) : 文本编辑
-* [LICEcap](http://www.cockos.com/licecap/) : 将屏幕操作记录成Gif动画。可用于记录操作步骤，方便和他人交流。</td></tr>
+* [LICEcap](http://www.cockos.com/licecap/) : 将屏幕操作记录成Gif动画。可用于记录操作步骤，方便和他人交流。
 * [TortoiseGit](https://code.google.com/p/tortoisegit/) : Windows下的Git客户端的UI界面
 * [VIM](http://www.vim.org/) : 文本编辑
 * [豌豆荚](http://www.wandoujia.com/) : Android手机应用管理

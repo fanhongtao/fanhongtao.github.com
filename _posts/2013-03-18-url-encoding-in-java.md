@@ -1,7 +1,7 @@
 ---
 layout: post
 title: URL编码的简易方式
-categories: java
+categories: programming
 tags: [java]
 copyright: cn
 ---

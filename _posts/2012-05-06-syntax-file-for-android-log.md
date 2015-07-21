@@ -2,7 +2,7 @@
 layout: post
 title: Syntax file for Android Log
 description:  VIM syntax file to view Android's Log with colors.
-categories: android
+categories: programming
 tags: [android, vim]
 copyright: en
 ---

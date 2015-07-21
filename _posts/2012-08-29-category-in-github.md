@@ -2,10 +2,13 @@
 layout: post
 title: Category in github. The semi-automatic way
 description: Plugin free, with only a little work to do.
-categories: jekyll
-tags: [category, github]
+categories: software
+tags: [jekyll]
 copyright: en
 ---
+
+* content
+{:toc}
 
 As we know, [github](http://github.com) doesn't allow us to use plugin in jekyll for security reason. So, here comes the problem. How can we use category?
 

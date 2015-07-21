@@ -6,6 +6,9 @@ tags: [life]
 copyright: cn
 ---
 
+* content
+{:toc}
+
 # 1、缘起
 
 联通的信号在家里一直不是很好，最多也就显示2格信号：

@@ -2,15 +2,17 @@
 layout: post
 title: AutoHotKey
 description:  AutoHotKey基本说明及我在使用时的一点小技巧
-categories: tool
-tags: [tool, autohotkey]
+categories: software
+tags: [autohotkey]
 copyright: cn
 ---
 
+* content
+{:toc}
+
 2003年，Chris Mallett 提议在 AutoIt v2 中集成热键支持，未得到预期响应，于是开发了 AutoHotkey 。因为后期 AutoHotkey 更新速度较慢，其他程序员也发布了一些改进分支。其中，Lexikos 维护的 AutoHotkey_L 分支影响最大。Chris Mallett 于 2010年10月认可了 AutoHotkey_L 的继承地位，并改称原版本为 AutoHotkey Basic。
 
-因为使用过程中会涉及中文，所以建议[下载 AutoHotkey_L 版本|http://www.autohotkey.net/~Lexikos/AutoHotkey_L/AutoHotkey_L_Install.exe]，软件安装包约2.5M
-。可以通过GitHub下载[L版本源码|https://github.com/Lexikos/AutoHotkey_L]。
+因为使用过程中会涉及中文，所以建议[下载 AutoHotkey_L 版本](http://www.autohotkey.net/~Lexikos/AutoHotkey_L/AutoHotkey_L_Install.exe)，软件安装包约2.5M。可以通过GitHub下载[L版本源码](https://github.com/Lexikos/AutoHotkey_L)。
 
 * 官方网站：<http://www.autohotkey.com/>
 * 中文论坛：<http://ahk.5d6d.com/>

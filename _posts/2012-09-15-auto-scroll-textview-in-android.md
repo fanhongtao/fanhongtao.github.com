@@ -2,10 +2,13 @@
 layout: post
 title: Android中自动向上滚动的TextView
 description:  向TextView中增加一行时，如何实现总能显示最新增加的行
-categories: android
+categories: programming
 tags: [android]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 在某些场景下，要显示日志记录，需要实现让TextView能够显示最新增加的行。
 

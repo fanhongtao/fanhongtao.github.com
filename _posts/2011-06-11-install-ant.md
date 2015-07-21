@@ -2,7 +2,7 @@
 layout: post
 title: Ant安装
 description:  安装Ant的最基本步骤
-categories: ant
+categories: software
 tags: [ant]
 copyright: cn
 ---

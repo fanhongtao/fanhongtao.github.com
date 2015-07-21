@@ -2,8 +2,8 @@
 layout: post
 title: Windows下使用msysgit下载Android代码
 description:  通过一个bash脚本来下载Android代码
-categories: android
-tags: [android, 源码, msysgit]
+categories: programming
+tags: [android]
 copyright: cn
 ---
 

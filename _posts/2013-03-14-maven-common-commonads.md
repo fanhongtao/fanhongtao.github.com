@@ -2,10 +2,13 @@
 layout: post
 title: Maven入门
 description:  简介Maven的最简单的用法
-categories: maven
+categories: software
 tags: [maven]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 # 1. 安装
 
@@ -45,6 +48,7 @@ Mavan依赖于一个名为 pom.xml 的文件来对项目进行管理，类似于
 # 3. 常用命令
 
 在有 pom.xml 文件的目录下，执行以下命令
+
 <table width="100%">
     <thead>
         <tr><th>命令</th><th>用途</th></tr>

@@ -1,10 +1,13 @@
 ---
 layout: post
 title: 给Android工程添加第三方库的JavaDoc
-categories: android
+categories: programming
 tags: [android, eclipse]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 # 有源码的第三方库
 

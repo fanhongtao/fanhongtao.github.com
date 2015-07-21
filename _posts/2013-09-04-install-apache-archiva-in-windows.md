@@ -2,11 +2,13 @@
 layout: post
 title: Windows下安装 Apache Archiva
 description:  Archiva 是Apache组织的一个Maven服务端管理软件。
-categories: maven
+categories: software
 tags: [maven, archiva, windows]
 copyright: cn
 ---
 
+* content
+{:toc}
 
 # 1 下载版本
 

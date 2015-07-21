@@ -2,10 +2,13 @@
 layout: post
 title: 使用ANT编译Android apk文件
 description:  使用ANT编译Android apk文件的基本步骤
-categories: android
-tags: [android, apk, ant]
+categories: programming
+tags: [android, ant]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 前提：需要安装 [Ant](http://ant.apache.org/bindownload.cgi) 1.8或以上版本。
 

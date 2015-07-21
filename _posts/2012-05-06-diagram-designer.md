@@ -1,10 +1,13 @@
 ---
 layout: post
 title: Diagram Designer
-categories: tool
+categories: software
 tags: [tool]
 copyright: en
 ---
+
+* content
+{:toc}
 
 # Introduction
 

@@ -1,10 +1,13 @@
 ---
 layout: post
 title: Interface of Samsung 9100 contact app
-categories: android
+categories: programming
 tags: [android]
 copyright: en
 ---
+
+* content
+{:toc}
 
 Recently, I am using a Samsung 9100 mobile phone as a test device. There are some good designs in 9100′s contact app.
 
@@ -12,7 +15,7 @@ Recently, I am using a Samsung 9100 mobile phone as a test device. There are som
 
 While dialing, it can matches number or letters. The matched part is show in different color, some light blue. It also show the matched numbers, and we can choose one from matched results.
 
-<a href="http://imgur.com/Nl1K8nx"><img src="http://i.imgur.com/Nl1K8nx.png" title="match letter" alt=1-match-letter.png" /></a><br>
+<a href="http://imgur.com/Nl1K8nx"><img src="http://i.imgur.com/Nl1K8nx.png" title="match letter" alt="1-match-letter.png" /></a><br>
 <a href="http://imgur.com/YV5O9FV"><img src="http://i.imgur.com/YV5O9FV.png" title="search result" alt="2-search-result.png" /></a><br>
 <a href="http://imgur.com/4nWEwRU"><img src="http://i.imgur.com/4nWEwRU.png" title="match number" alt="3-match-number.png" /></a><br>
 

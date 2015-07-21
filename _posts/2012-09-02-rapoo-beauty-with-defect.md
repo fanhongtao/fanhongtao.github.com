@@ -3,7 +3,7 @@ layout: post
 title: Rapoo 9020, beauty with default
 description:  How do I feel about rapoo 9020.
 categories: computer
-tags: [rapoo]
+tags: [hardware]
 copyright: en
 ---
 

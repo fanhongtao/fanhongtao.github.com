@@ -2,10 +2,13 @@
 layout: post
 title: 使用 gitolite 管理 git 配置库的权限
 description:  gitolite入门级文章.
-categories: git
-tags: [git, gitolite]
+categories: software
+tags: [git]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 ## 0. 简介
 Git是一个分布式的版本控制系统，但Git自身缺少相应的权限控制机制，需要借助于第三方软件来管理权限。

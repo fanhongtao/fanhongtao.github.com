@@ -2,10 +2,13 @@
 layout: post
 title: git常用命令说明
 description:  记录我常用的git命令
-categories: git
+categories: software
 tags: git
 copyright: cn
 ---
+
+* content
+{:toc}
 
 # 1. 配置git 
 
@@ -82,7 +85,8 @@ git commit -m "desc"    # 将索引中的内容提交到本地仓库，提交的
 </pre>
 
 # 4 分支
-# 4.1 创建本地分支
+
+## 4.1 创建本地分支
 <pre>
 git checkout -b iss53   # 创建一个名为iss53的分支，并将当前工作目录切换到iss53分支
 </pre>
@@ -93,7 +97,7 @@ git branch iss53        # 创建一个名为iss53的分支
 git checkout iss53      # 将工作目录切换到iss53分支
 </pre>
 
-# 4.2 分支合并
+## 4.2 分支合并
 先切换到待合入的目标分支，再执行git merge
 <pre>
 git checkout master     # 切换到master分支
@@ -106,7 +110,7 @@ git branch -d hotfix    # 删除hotfix分支（因为内容已经在master上了
 git mergetool filename
 </pre>
 
-# 4.3 分支管理
+## 4.3 分支管理
 <pre>
 git branch              # 列出所有分支，当前分支前有一个星号(*)
 git branch -v           # 列出所有分支，及各分支最后一次commit信息
@@ -114,7 +118,7 @@ git branch --merged     # 列出已经与当前分支合并的分支
 git branch --nomerged   # 列出还没有与当前分支合并的分支
 </pre>
 
-# 4.4 远程分支
+## 4.4 远程分支
 
 命令格式： git push 远端仓库名  分支名[:远端分支名]
 <pre>

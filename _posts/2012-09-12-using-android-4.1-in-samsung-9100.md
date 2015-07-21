@@ -2,7 +2,7 @@
 layout: post
 title: 在三星9100上使用Android 4.1.1
 description:  修复Android4.1.1 ROM无法使用Eclipse上传APK包的BUG。
-categories: android
+categories: programming
 tags: [android]
 copyright: cn
 ---

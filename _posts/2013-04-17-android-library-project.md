@@ -1,10 +1,13 @@
 ---
 layout: post
 title: Android 的 Library 工程
-categories: android
+categories: programming
 tags: [android, ant]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 # Library工程
 
@@ -20,25 +23,25 @@ copyright: cn
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="Test1" default="javadoc">
-	<property name="path.lib" value="${basedir}/libs" />
-	<property name="path.android" value="D:/Android/android-sdks" />
+    <property name="path.lib" value="${basedir}/libs" />
+    <property name="path.android" value="D:/Android/android-sdks" />
 
-	<path id="path.depended">
-		<!-- Add third-party jars in directory ./libs, if any -->
-		<pathelement location="${path.lib}/xxx.jar" />
+    <path id="path.depended">
+        <!-- Add third-party jars in directory ./libs, if any -->
+        <pathelement location="${path.lib}/xxx.jar" />
 
-		<!-- Add jars for Android -->
-		<pathelement location="${path.android}/platforms/android-7/android.jar" />
-		<pathelement location="${path.android}/tools/support/annotations.jar" />
-	</path>
+        <!-- Add jars for Android -->
+        <pathelement location="${path.android}/platforms/android-7/android.jar" />
+        <pathelement location="${path.android}/tools/support/annotations.jar" />
+    </path>
 
-	<target name="javadoc">
-		<javadoc classpathref="path.depended" 
-			sourcepath="src;gen" 
-			encoding="UTF-8" charset="UTF-8" 
-			destdir="docs" doctitle="Library"
-			version="true"/>
-	</target>
+    <target name="javadoc">
+        <javadoc classpathref="path.depended" 
+            sourcepath="src;gen" 
+            encoding="UTF-8" charset="UTF-8" 
+            destdir="docs" doctitle="Library"
+            version="true"/>
+    </target>
 
 </project>
 {% endhighlight %}

@@ -2,8 +2,8 @@
 layout: post
 title: ADB无法正常启动
 description:  记录解决ADB无法正常启动的过程
-categories: android
-tags: [android, adb]
+categories: programming
+tags: [android]
 copyright: cn
 ---
 

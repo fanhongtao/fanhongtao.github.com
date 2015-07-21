@@ -2,8 +2,8 @@
 layout: post
 title: 一个创建用户的脚本
 description:  一个快速创建Linux用户的Bash脚本
-categories: linux
-tags: [linux, 脚本, Bash]
+categories: software
+tags: [linux]
 copyright: cn
 ---
 

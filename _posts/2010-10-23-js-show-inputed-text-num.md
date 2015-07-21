@@ -2,8 +2,8 @@
 layout: post
 title: input元素提示用户已输入字符
 description:  支持输入，删除，粘贴操作
-categories: js
-tags: [HTML, js, input]
+categories: programming
+tags: [js]
 copyright: cn
 ---
 

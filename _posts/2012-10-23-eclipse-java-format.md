@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 在 Eclipse 中设置Java Format
-categories: eclipse
+categories: software
 tags: [eclipse]
 copyright: cn
 ---

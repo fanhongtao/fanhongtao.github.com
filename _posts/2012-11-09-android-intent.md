@@ -2,10 +2,13 @@
 layout: post
 title: Android Intent机制
 description:  
-categories: android
+categories: programming
 tags: [android, intent]
 copyright: cn
 ---
+
+* content
+{:toc}
 
 # 1 基本原理
 
@@ -58,6 +61,7 @@ Intent 对象由以下几部分组成：
 * Action
 
     这是一个字符串对象（mAction）：
+    
     * 对 Activity 和 Service 用于标明需要执行的操作（action） 
     * 对 Broadcast，则标明已经发生的事件
 

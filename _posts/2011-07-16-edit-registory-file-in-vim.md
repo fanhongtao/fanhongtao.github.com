@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Edit registory file in Vim
-categories: vim
+categories: software
 tags: [vim]
 copyright: en
 ---
