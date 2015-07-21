@@ -33,6 +33,10 @@ layout: default
   </section>
 
   <aside id="sidebar" class="col-sm-3 sidebar hidden-xs">
+    <section id="search">
+        {% include baidu_search.html %}
+    </section>
+    <hr>
     <section id="catetory" class="shadow-bottom-center">
         <div class="sidebar-title"> <i class="fa fa-folder-open"></i>  <a href="{{ site.BASE_PATH }}/{{ site.categories_path }}"> Categories </a><span title="分类总数">{{ site.categories | size }}</span> </div>
         <div class="category">
