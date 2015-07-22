@@ -5,16 +5,16 @@ layout: default
   <section id="main" class="col-sm-9">
     <div id="main-inner" class="main">
       {% for rpost in paginator.posts %}
-          <div class="index-post">
-              <h3 class="title"><a href="{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></h3>
-              <p class="date"><time pubdate="{{ rpost.date }}">{{ rpost.date | date_to_string }}</time></p>
+          <article class="index-post">
+              <header><a href="{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></header>
+              <p class="date"><time pubdate="{{ rpost.date }}">{{ rpost.date | date: "%B %d, %Y"  }}</time></p>
               <p>
               {% if rpost.description %}
               {{ rpost.description }}
               {% endif %}
               </p>
               <p class="more"><a href="{{ rpost.url }}" title="Read More" rel="nofollow"><span>&#10149;</span>Read More</a></p>
-          </div>
+          </article>
       {% endfor %}
       {% if paginator.total_pages > 1 %}
           <div id="pagination">
@@ -34,7 +34,7 @@ layout: default
 
   <aside id="sidebar" class="col-sm-3 sidebar hidden-xs">
     <section id="search">
-        {% include baidu_search.html %}
+        {% include search_box %}
     </section>
     <hr>
     <section id="catetory" class="shadow-bottom-center">

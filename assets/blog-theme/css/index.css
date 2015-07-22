@@ -29,8 +29,8 @@ nav{
 --------------------------------------------*/
 .index-post  { margin-bottom: 20px; padding: 10px 0; border-bottom: 1px dashed #bebebe; }
 .index-post .date    { font-style: italic; color: #888; }
-.index-post .title    { font-size: 26px; font-family: Georgia; text-shadow: 1px 1px #FFFFFF; }
-.index-post .title a  { color: #343434; }
+.index-post header    { font-size: 26px; font-family: Georgia; text-shadow: 1px 1px #FFFFFF; }
+.index-post header a  { color: #343434; }
 .index-post .more { text-align: right; font-family: Verdana; color: #898989; font-size: 12px; }
 .index-post .more a  { color: #343434; }
 
