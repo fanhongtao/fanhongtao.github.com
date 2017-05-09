@@ -41,7 +41,8 @@ layout: default
         <div class="sidebar-title"> <i class="fa fa-folder-open"></i>  <a href="{{ site.BASE_PATH }}/{{ site.categories_path }}"> Categories </a><span title="分类总数">{{ site.categories | size }}</span> </div>
         <div class="category">
             <ul>
-                {% for cat in site.categories order:ascending %}
+                {% assign categories = site.categories | sort %}
+                {% for cat in categories %}
                     <li><a href="{{ site.BASE_PATH }}/{{ site.categories_path }}#{{ cat[0] }}">{{ cat[0] }}<span>({{ cat[1].size }})</span></a></li>
                 {% endfor %}
             </ul>
