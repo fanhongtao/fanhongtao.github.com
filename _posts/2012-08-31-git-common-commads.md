@@ -82,6 +82,7 @@ git diff                # 显示工作目录与本地仓库中内容的区别
 git diff --staged       # 显示工作目录与索引的区别
 git add xxx             # 将当前目录下的xxx文件添加到索引
 git commit -m "desc"    # 将索引中的内容提交到本地仓库，提交的描述信息为 desc
+git log --name-status   # 显示提交记录及对对应的文件名字
 </pre>
 
 # 4 分支
