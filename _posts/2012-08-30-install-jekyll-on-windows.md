@@ -56,7 +56,7 @@ pi.rubygems.org/specs.4.8.gz)
 </pre>
 
 除了考虑翻墙之外，还可以通过将 source 指向国内的网址来实现下载。
- 
+
 <pre>
 fht@FHT-THINK /c/Ruby21-x64
 $ gem source
@@ -79,16 +79,16 @@ http://ruby.taobao.org/ added to sources
 
 创建一个名为 Gemfile 的文本文件，文件的内容为
 
-<pre>
-source 'http://ruby.taobao.org/'
-gem 'github-pages'
-</pre>
+```
+source 'https://gems.ruby-china.org/'
+gem 'github-pages', group: :jekyll_plugins
+```
 
 然后执行以下命令安装 Jekyll 相关的组件
 
-<pre>
+```
 bundle install
-</pre>
+```
 
 然后就可以开始我们的Jekyll之旅了。
 
@@ -103,52 +103,22 @@ bundle update
 {% endhighlight %}
 
 
-## 1.3 安装 Pygments 
+## 1.3 代码高亮
 
-安装 Pygments 是为了在Blog中能够实现代码高亮。如果不需要在Blog中写代码片段，可以不用安装 Pygments, 跳过本章节。
+以前是使用 Pygments 来实现Blog中代码高亮。这需要安装 Python 等相关内容，比较复杂。
 
-### 1.3.1 安装
-1. 安装Python: 从 [Phthon网站](http://www.python.org/getit/)下载并安装 [python-2.7.3.msi](http://www.python.org/ftp/python/2.7.3/python-2.7.3.msi) （或更高版本的 python-2.x.x）, 假设安装在 c:\Python27 目录
-2. 安装easy_install: 从[http://pypi.python.org/pypi](http://pypi.python.org/pypi)下载并安装 [setuptools-0.6c11.win32-py2.7.exe](http://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11.win32-py2.7.exe#md5=57e1e64f6b7c7f1d2eddfc9746bbaf20)
-3. 安装 Pygments: 执行下命令
-{% highlight bat %}
-cd c:\Python27\Scripts\
-easy_install Pygments
-{% endhighlight %}
-
-最后再将 c:\Python27\Scripts\ 添加到环境变量 PATH 中。
-
-### 1.3.2 打补丁
-
-参考下面的链接为Ruby打补丁，防止出现“Liquid error: bad file descriptor”错误。
-
-* [https://gist.github.com/1185645](https://gist.github.com/1185645)
-
-也可以直接下载我修改后的文件 [albino.rb](/attachments/albino.rb) 。注意：使用“另存为”来下载。
+现在 GitHub 要求[使用 `rouge` 来实现代码高亮](https://help.github.com/articles/page-build-failed-config-file-error/#fixing-highlighting-errors) 。
 
 
-### 1.3.3 生成 css 文件
+### 1.3.1 配置 \_config.yaml文件
 
-为了在博客中使用Pygments， 还需要生成相应的 css文件，在Jekyll工程目录下执行；
-<pre>
-pygmentize -S default -f html > css/pygments.css
-</pre>
-即：使用缺省的配色方案，将生成的文件 pygments.css 存放在 css 目录下。
-
-同时，还需要修改 layout 目录下的 default.html ，在 head 标签内部增加一行
-
-{% highlight html %}
-<link rel="stylesheet" href="/css/pygments.css" type="text/css" />
-{% endhighlight %}
-
-### 1.3.4 配置 _config.yaml文件
-在 _config.yaml 文件中增加 
-<pre>
-highlighter:      pygments
-</pre>
+在 \_config.yaml 文件中增加
+```
+highlighter:      rouge
+```
 表示生成Blog页面时，使用 Pygments 来进行高亮显示。
 
-### 1.3.5 使用
+### 1.3.2 使用
 在 Blog 文件中将代码写在 highlight 和 endhighlight 之间，如：
 <pre>
 {{"{%"}} highlight html %}
@@ -156,27 +126,27 @@ highlighter:      pygments
 {{"{%"}} endhighlight %}
 </pre>
 
-除了html之外，还可以支持其它的语言，如: bash, java, python 等，参考：[Available lexers][lexers]
+除了html之外，还可以支持其它的语言，如: bash, java, python 等，参考：[List of supported languages and lexers][lexers]
 
 ## 1.4 启动 Jekyll
 
 在 bash 窗口下执行以下命令启动Jekyll
 
-<pre>
+```
 bundle exec jekyll serve
-</pre>
+```
 
 如果启动时报错：
 
-<pre>
+```
 jekyll invalid byte sequence in GBK
-</pre>
+```
 
 则需要修改 .bashrc 文件， 添加以下内容
 
-<pre>
+```
 export LANG=en_US.UTF-8
-</pre>
+```
 
 ## 1.5 参考资料
 
@@ -194,10 +164,10 @@ export LANG=en_US.UTF-8
 * [YMAL语法](http://www.yaml.org) , [V1.2版本](http://www.yaml.org/spec/1.2/spec.html)
 * [Markdown: Syntax](http://daringfireball.net/projects/markdown/syntax)
 * [Markdown语法说明](http://wowubuntu.com/markdown/)
-* [Available lexers][lexers]
+* [List of supported languages and lexers][lexers]
 
 [ujp]: https://help.github.com/articles/using-jekyll-with-pages
-[lexers]: http://pygments.org/docs/lexers/
+[lexers]: https://github.com/jneen/rouge/wiki/List-of-supported-languages-and-lexers
 
 # 2 在 Bash on Ubuntu on Windows 下安装
 
@@ -207,18 +177,18 @@ Windows 10 提供了 Bash on Ubuntu on Windows，我们可以在该 Bash 下安�
 
 如果系统中还没有 gcc 和 make ，则需要先安装。
 
-<pre>
+```
 sudo apt update
 sudo apt-get install gcc make
-</pre>
+```
 
 安装完 gcc 和 make 后，执行如下命令安装 Ruby
 
-<pre>
+```
 sudo apt-add-repository ppa:brightbox/ruby-ng
 sudo apt update
 sudo apt install ruby2.3 ruby2.3-dev
-</pre>
+```
 
 ## 2.2 安装 Bundler 及 Jekyll
 
@@ -226,65 +196,57 @@ sudo apt install ruby2.3 ruby2.3-dev
 
 执行以下命令
 
-<pre>
+```
 sudo gem install bundler
-</pre>
+```
 
 ### 2.2.2 安装 Jekyll
 
 在执行 “bundle install” 的过程中，编译nokogiri时会提示找不到 zlib.h，所以先安装 libz-dev。
 
-<pre>
+```
 sudo apt-get install libz-dev
-</pre>
-
+```
 再创建一个名为 Gemfile 的文本文件，文件的内容为
 
-<pre>
+```
 source 'https://gems.ruby-china.org/'
 gem 'github-pages', group: :jekyll_plugins
-</pre>
+```
 
 然后执行以下命令安装 Jekyll 相关的组件
 
-<pre>
+```
 sudo bundle install
-</pre>
+```
 
-## 2.3 安装 Pygments
-
-执行下命令
-
-<pre>
-sudo apt-get install python-setuptools
-sudo easy_install Pygments
-</pre>
-
-## 2.4 安装 nodejs
+## 2.3 安装 nodejs
 
 在运行 Jekyll 时，会提示没有 JavaScript 运行环境，并给出了一些可选项，我选择安装 nodejs。
 
-<pre>
+```
 sudo apt-get install nodejs
-</pre>
+```
 
-## 2.5 启动 Jekyll
+## 2.4 启动 Jekyll
 
 执行以下命令启动Jekyll
 
-<pre>
+```
 bundle exec jekyll serve
-</pre>
+```
 
 注意：由于Windows提供的 Ubuntu 子系统还有一个Bug:  [Filesystem watchers like libinotify do not work](https://github.com/Microsoft/BashOnWindows/issues/216) ，所以启动命令需要增加一个参数。
 
-<pre>
+```
 bundle exec jekyll serve --no-watch
-</pre>
+```
 
 这意味着，如果修改了文件， Jekyll无法实时更新，只能通过重启 Jekyll 来查看更新后的效果。
 
-## 2.6 参考资料
+> Note: Windows 10  Version 1703 （创意者更新）已经修改了该Bug。
+
+## 2.5 参考资料
 
 * [Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
 * [Linux下安装jekyll](http://www.cnblogs.com/ee2213/p/3915243.html)

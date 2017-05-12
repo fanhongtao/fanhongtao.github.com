@@ -1,6 +1,6 @@
 # standard jekyll configuration
 markdown:         kramdown
-highlighter:      pygments
+highlighter:      rouge
 paginate:         10     # the number of post per page
 permalink:        /:year/:month/:day/:title.html
 safe:             true
