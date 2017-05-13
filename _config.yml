@@ -6,6 +6,8 @@ permalink:        /:year/:month/:day/:title.html
 safe:             true
 lsi:              false
 excerpt_separator: ""   # Workaround for http://blog.slaks.net/2013-08-09/jekyll-tag-was-never-closed
+gems:
+    - jemoji
 
 # configuration required for some pages
 title:            Fan's Blog
