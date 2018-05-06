@@ -13,40 +13,78 @@ copyright: cn
 ## 0. 简介
 Git是一个分布式的版本控制系统，但Git自身缺少相应的权限控制机制，需要借助于第三方软件来管理权限。
 
-之前我是使用在[《pro git》](http://progit.org/book/)一书中 “[4.4 - Setting Up the Server](http://progit.org/book/ch4-4.html)”中介绍的方法来管理Git库。但随着项目组中成员的增加，使用authorized_keys的方法已经变得很难维护 。所以需要寻求新的解决方法。这里我选择使用 gitolite 。
+之前我是使用在[《pro git》](https://git-scm.com/book/en/v2)一书中 “[4.4 - Setting Up the Server](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server)”中介绍的方法来管理Git库。但随着项目组中成员的增加，使用authorized_keys的方法已经变得很难维护 。所以需要寻求新的解决方法。这里我选择使用 gitolite 。
 
 gitolite 支持到以分支（branch）为单位的权限控制。不过我没有使用，仅仅做到以单独的Git库为粒度进行权限控制。
 
-## 1. （在服务器上 ）安装gitolite
-登录到 git 用户，从[gitolite官网](https://github.com/sitaramc/gitolite)下载最新的 gitolite 版本。
+## 1. （在服务器上）安装gitolite
+~~登录到 git 用户，从[gitolite官网](https://github.com/sitaramc/gitolite)下载最新的 gitolite 版本。~~
 
-按照README中的操作步骤安装：
+先更新，防止安装依赖包时出错
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
+
+再安装 gitolite
+
+```
+sudo apt-get install gitolite3
+```
+
+安装时提示配置 SSH 信息，直接回车，忽略它。
+
+## 2. （在服务器上）创建git用户（如果已经存在，则跳过此步骤）
+
+创建用户 git，并设置用户的 shell 为可登录的 shell，如 /bin/bash，同时添加同名的用户组。
+
+```
+sudo adduser --system --shell /bin/bash --group git
+```
+
+然后为 git 用户设置口令。
+
+```
+sudo passwd git
+```
+
+## 3. （在服务器上）配置 gitolite
+
+使用 git 用户登录，将管理员的公钥(public key，缺省文件名 id_rsa.pub) 拷贝到 git 用户 $HOME 目录，并改成适当的名称，如： fht.pub
+
+执行 ```gitolite setup -pk fht.pub``` ，执行结果如下：
 
 {% highlight bash %}
-git clone git://github.com/sitaramc/gitolite
-cd gitolite
-src/gl-system-install
-gl-setup ~/YourName.pub
+git@test:~$ gitolite setup -pk fht.pub
+Initialized empty Git repository in /home/git/repositories/gitolite-admin.git/
+Initialized empty Git repository in /home/git/repositories/testing.git/
+WARNING: /home/git/.ssh missing; creating a new one
+    (this is normal on a brand new install)
+WARNING: /home/git/.ssh/authorized_keys missing; creating a new one
+    (this is normal on a brand new install)
+git@test:~$
 {% endhighlight %}
 
-## 2. （在PC机上）克隆 gitolite-admin
-在PC机上执行如下命令：
+## 4. （在PC机上）克隆 gitolite-admin
+在PC机上执行如下命令（假设服务器主机名为 vihome-desktop ）：
 {% highlight bash %}
 git clone git@vihome-desktop:gitolite-admin
 {% endhighlight %}
 
-注意：由于之前是直接将我的 public key 写入到 authorized_keys 文件中，需要先将之前的 public key 从authorized_keys中删除。否则这一步无法执行成功。
+~~注意：由于之前是直接将我的 public key 写入到 authorized_keys 文件中，需要先将之前的 public key 从authorized_keys中删除。否则这一步无法执行成功。~~
 
-##3.（在PC机上）配置 gitolite-admin
+## 5.（在PC机上）配置 gitolite-admin
 gitolite-admin 下有两个子目录：
 
 1.	conf 目录下存放了文件 gitolite.conf，用于配置各成员的访问权限。
 2.	keydir目录存放所有需要访问Git库的成员的 public key文件。
 
-###3.1	将 public key 存放到 keydir 目录下
+### 5.1	将 public key 存放到 keydir 目录下
+
 将项目组中各成员的 public key 更名成各成员的“拼音.pub”的命名方式。
 
-###3.2	修改 gitolite.conf 文件
+### 5.2	修改 gitolite.conf 文件
 
 关于配置详细的说明参见 doc/ gitolite.conf.mkd
 
@@ -100,9 +138,25 @@ repo    @android_repos
         R       =   @reader
 </pre>
 
-###3.3	提交 gitolite-admin
+### 5.3	提交 gitolite-admin
 将 keydir 目录下的 *.pub 文件 和 	conf 目录下的 gitolite.conf 修改提交到 gitolite-admin 。这样新的权限数据就生效了。
 
+## 6 （在服务器上）添加 Git 库
 
+通过 gitolite-admin 配置了权限，还需要手工在服务器上添加相应库， gitolite 并不会自动创建不存在的库。
 
+假如在 ~/repositories/android 要添加一个名为 phone的库，需要执行以下命令
+
+```
+cd ~/repositories/android
+mkdir phone.git
+cd phone.git
+git init --bare
+```
+
+然后就可以通过以下命令来访问该库
+
+```
+git clone git@vihome-desktop:android/phone.git
+```
 
