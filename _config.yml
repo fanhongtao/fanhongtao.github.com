@@ -20,6 +20,6 @@ author:
 github:
     username: fanhongtao
 
-categories_path: category.html
-tags_path: tag.html
+categories_path: /category.html
+tags_path: /tag.html
 # rss_path: feed.xml

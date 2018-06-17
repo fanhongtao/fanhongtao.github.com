@@ -7,7 +7,7 @@
     <a name="{{key}}"></a>
     <h2 name="{{ key }}">{{ key }}</h2>
     <ul class="tag-item list-unstyled" style="margin-left:1.3em">{% for post in key_maps[key] %}{% if post.title != null %}
-      <li><a href="{{ site.BASE_PATH }}{{post.url}}">{{post.title}}</a> <span>- {{ post.date | date: "%B %d, %Y" }}</span></li>{% endif %}{% endfor %}
+      <li><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a> <span>- {{ post.date | date: "%B %d, %Y" }}</span></li>{% endif %}{% endfor %}
     </ul>
   </div>{% endunless %}{% endfor %}
 </article>

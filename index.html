@@ -5,10 +5,10 @@ layout: default
   <section id="main" class="col-sm-9">
     <div id="main-inner" class="main">
       {% for rpost in paginator.posts %}<article class="index-post">
-        <header><a href="{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></header>
+        <header><a href="{{ rpost.url | prepend: site.baseurl }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></header>
         <p class="date"><time pubdate="{{ rpost.date }}">{{ rpost.date | date: "%B %d, %Y"  }}</time></p>
         <p>{% if rpost.description %}{{ rpost.description }}{% endif %}</p>
-        <p class="more"><a href="{{ rpost.url }}" title="Read More" rel="nofollow"><span>&#10149;</span>Read More</a></p>
+        <p class="more"><a href="{{ rpost.url | prepend: site.baseurl }}" title="Read More" rel="nofollow"><span>&#10149;</span>Read More</a></p>
       </article>{% endfor %}
       {% if paginator.total_pages > 1 %}<div id="pagination"><ul class="index-pagination">{% for page in (1..paginator.total_pages) %}
         {% if page == paginator.page %}<li class="current"><a href="javascript:void(0);">{{ page }}</a></li>{% else %}<li><a href="/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a></li>{% endif %}{% endfor %}
@@ -22,16 +22,16 @@ layout: default
     </section>
     <hr>
     <section id="catetory" class="shadow-bottom-center">
-      <div class="sidebar-title"> <i class="fa fa-folder-open"></i>  <a href="{{ site.BASE_PATH }}/{{ site.categories_path }}"> Categories </a><span title="分类总数">{{ site.categories | size }}</span> </div>
+      <div class="sidebar-title"> <i class="fa fa-folder-open"></i>  <a href="{{ site.categories_path | prepend: site.baseurl }}"> Categories </a><span title="分类总数">{{ site.categories | size }}</span> </div>
       <div class="category"><ul>{% assign categories = site.categories | sort %}{% for cat in categories %}
-        <li><a href="{{ site.BASE_PATH }}/{{ site.categories_path }}#{{ cat[0] }}">{{ cat[0] }}<span>({{ cat[1].size }})</span></a></li>{% endfor %}
+        <li><a href="{{ site.categories_path | prepend: site.baseurl }}#{{ cat[0] }}">{{ cat[0] }}<span>({{ cat[1].size }})</span></a></li>{% endfor %}
       </ul></div>
     </section>
 
     <section id="tags" class="shadow-bottom-center">
-      <div class="sidebar-title"> <i class="fa fa-tags"></i> <a href="{{ site.BASE_PATH }}/{{ site.tags_path }}"> Tags </a><span title="标签总数">{{ site.tags | size }}</span></div>
+      <div class="sidebar-title"> <i class="fa fa-tags"></i> <a href="{{ site.tags_path | prepend: site.baseurl }}"> Tags </a><span title="标签总数">{{ site.tags | size }}</span></div>
       <div class="tags">{% for tag in site.tags %}
-        <a href="{{ site.BASE_PATH }}/{{ site.tags_path }}#{{ tag[0] }}" style='font-size:{{ tag[1].size | times: 2 | plus: 15  }}px;'>{{ tag[0] }}</a>{% endfor %}
+        <a href="{{ site.tags_path | prepend: site.baseurl }}#{{ tag[0] }}" style='font-size:{{ tag[1].size | times: 2 | plus: 15  }}px;'>{{ tag[0] }}</a>{% endfor %}
       </div>
     </section>
 
