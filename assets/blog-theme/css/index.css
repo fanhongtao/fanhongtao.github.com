@@ -123,7 +123,8 @@ footer a:hover {color: #bbb;text-decoration: none;}    /* 鼠标移动到链接�
 footer a:active {color: #bbb}     /* 选定的链接 */
 footer .point{ margin: 0 8px; }
 
-/*  Tag Box  */
+/* 供 category 和 tags 使用  */
+.tag-page h2 {margin-top: 0px}
 .tag-box li i { opacity: .9; }
 .tag-box a { padding: 4px 6px; margin: 2px; background: #eee; color: #555; border-radius: 3px; text-decoration: none; border: 1px dashed #cccccc; }
 .tag-box a span { vertical-align: super; font-size: .8em; }
@@ -131,6 +132,8 @@ footer .point{ margin: 0 8px; }
 .tag-box a.active { background: #57A957; border: 1px solid #4c964d; color: #FFF; }
 .inline { list-style: none; margin: 0; overflow: hidden; }
 .inline li { float: left; position: relative; margin-left: 10px; line-height: 30px; }
+.tag-item li {line-height: 35px;list-style:none;}
+.tag-item span {color:#777}
 
 /**
  * Blockquotes

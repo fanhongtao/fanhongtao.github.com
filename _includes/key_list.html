@@ -1,23 +1,15 @@
-<article>
-    <ul class="tag-box inline" style="margin-bottom: 20px; padding-left: 0px">
-        {% for item in (0..key_maps.size) %}{% unless forloop.last %}
-            {% capture key %}{{ key_words[item] | strip_newlines }}{% endcapture %}
-            <li><a href="#{{ key }}">{{ key }} <span>{{ key_maps[key].size }}</span></a></li>
-        {% endunless %}{% endfor %}
+<article class="tag-page">
+  <ul class="tag-box inline" style="margin-bottom: 20px; padding-left: 0px">{% for item in (0..key_maps.size) %}{% unless forloop.last %}{% capture key %}{{ key_words[item] | strip_newlines }}{% endcapture %}
+    <li><a href="#{{ key }}">{{ key }} <span>{{ key_maps[key].size }}</span></a></li>{% endunless %}{% endfor %}
+  </ul>
+
+  {% for item in (0..key_maps.size) %}{% unless forloop.last %}{% capture key %}{{ key_words[item] | strip_newlines }}{% endcapture %}<div>
+    <a name="{{key}}"></a>
+    <h2 name="{{ key }}">{{ key }}</h2>
+    <ul class="tag-item list-unstyled" style="margin-left:1.3em">{% for post in key_maps[key] %}{% if post.title != null %}
+      <li><a href="{{ site.BASE_PATH }}{{post.url}}">{{post.title}}</a> <span>- {{ post.date | date: "%B %d, %Y" }}</span></li>{% endif %}{% endfor %}
     </ul>
-    
-    {% for item in (0..key_maps.size) %}{% unless forloop.last %}
-        {% capture key %}{{ key_words[item] | strip_newlines }}{% endcapture %}
-        <div>
-            <a name="{{key}}"></a>
-            <h2 name="{{ key }}" style="margin-top: 0px">{{ key }}</h2>
-            <ul class="list-unstyled" style="margin-left:1.3em">
-            {% for post in key_maps[key] %}{% if post.title != null %}
-                <li style="line-height: 35px;list-style:none;"><a href="{{ site.BASE_PATH }}{{post.url}}">{{post.title}}</a> <span class="text-muted">- {{ post.date | date: "%B %d, %Y" }}</span></li>
-            {% endif %}{% endfor %}
-            </ul>
-        </div>
-    {% endunless %}{% endfor %}
+  </div>{% endunless %}{% endfor %}
 </article>
 
 {% assign key_words = nil %}
