@@ -15,15 +15,8 @@
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          {% for p in site.data.nav_menus %}
-              {% if p.url == page.url %}
-                <li class="active">
-              {% else %}
-                <li>
-              {% endif %}
-              <a href="{{ p.url | prepend: site.baseurl }}"><i class="fa {{ p.icon }}"></i> {{ p.text }}</a></li>
-          {% endfor %}
+        <ul class="nav navbar-nav navbar-right">{% for p in site.data.nav_menus %}
+          {% if p.url == page.url %}<li class="active">{% else %}<li>{% endif %}<a href="{{ p.url | prepend: site.baseurl }}"><i class="fa {{ p.icon }}"></i> {{ p.text }}</a></li>{% endfor %}
         </ul>
       </div>
     </div>
