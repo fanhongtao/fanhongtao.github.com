@@ -1,6 +1,6 @@
 
 /* commom */
-body { background-image: url(/assets/images/body-bg.jpg); font-family: 'Microsoft YaHei', 'SimHei', sans-serif; }
+body { background-color: #f0f0f0; font-family: 'Microsoft YaHei', 'SimHei', sans-serif; }
 pre { padding: 0; background: none; }
 pre code { font-size: 14px; }
 
@@ -107,7 +107,7 @@ nav{
 footer{
     min-height: 50px;
     line-height: 50px;
-    margin-top: 80px;
+    margin-top: 30px;
     background: #3f4850;
     color: #aaa;
     text-align: center;
