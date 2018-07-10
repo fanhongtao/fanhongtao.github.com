@@ -2,7 +2,7 @@
 layout: post
 title: 在Windows下安装Jekyll
 description: 记录我的安装过程。
-categories: software
+categories: jekyll
 tags: jekyll
 copyright: cn
 ---
@@ -250,3 +250,34 @@ bundle exec jekyll serve --no-watch
 
 * [Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
 * [Linux下安装jekyll](http://www.cnblogs.com/ee2213/p/3915243.html)
+
+
+# 3 遇到的问题
+
+## 3.1 Invalid US-ASCII character
+
+在更新我的 Blog 模板时，删除了 `Gemfile.lock` ，在执行 `bundle exec jekyll serve` 命令，自动生成了 `Gemfile.lock` ，但由于其使用了最新的版本，遇到了新问题。系统提示：
+
+```
+fht@fht-THINK:/mnt/e/Git/fht/fanhongtao.github.com$ bundle exec jekyll serve
+Configuration file: /mnt/e/Git/fht/fanhongtao.github.com/_config.yml
+
+            Source: /mnt/e/Git/fht/fanhongtao.github.com
+       Destination: /mnt/e/Git/fht/fanhongtao.github.com/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+  Conversion error: Jekyll::Converters::Scss encountered an error while converting 'assets/css/style.scss':
+                    Invalid US-ASCII character "\xE2" on line 5
+jekyll 3.7.3 | Error:  Invalid US-ASCII character "\xE2" on line 5
+```
+
+参考 [Invalid US-ASCII character "\xE2"](https://github.com/jekyll/jekyll/issues/4268) 中 “Hwesta commented on 23 Oct 2017” 的帮助。
+
+在 `.bashrc` 中增加如下行
+
+```
+export LANG=en_US.UTF-8
+```
+
+重新进入 bash ，问题得以解决。
+
