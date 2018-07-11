@@ -1,0 +1,1 @@
+{% if post %}{% assign tags = post.tags %}{% else %}{% assign tags = page.tags %}{% endif %}{% unless tags == empty %}<div class="meta-info"><span class="page-tag"><i class="fa fa-tags"></i>{% for tag in tags %}<a href="{{ site.tags_path | prepend: site.baseurl }}#{{ tag }}">{{ tag }}</a>{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}</span></div>{% endunless %}

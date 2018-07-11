@@ -1,14 +1,19 @@
 ---
 layout: default
 ---
-<div id="index" class="row">
+<div id="index" class="page" index>
   <section id="main" class="col-sm-9">
     <div id="main-inner" class="main">
-      {% for rpost in paginator.posts %}<article class="index-post">
-        <header><a href="{{ rpost.url | prepend: site.baseurl }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></header>
-        <p class="date"><time pubdate="{{ rpost.date }}">{{ rpost.date | date: "%B %d, %Y"  }}</time></p>
-        <p>{% if rpost.description %}{{ rpost.description }}{% else %}{{ rpost.excerpt | strip_html | truncate:200 }}{% endif %}</p>
-        <p class="more"><a href="{{ rpost.url | prepend: site.baseurl }}" title="Read More" rel="nofollow"><span>&#10149;</span>Read More</a></p>
+      {% for post in paginator.posts %}<article class="index-post">
+        <header><a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></header>
+        <div class="metadata">
+          <div class="meta-info"><i class="fa fa-calendar"></i><time>{{ post.date | date: "%B %d, %Y"  }}</time></div>
+          {% include page_category_min.html %}
+          {% include page_tag_min.html %}
+        </div>
+        <hr/>
+        <p>{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html | truncate:200 }}{% endif %}</p>
+        <p class="more"><a href="{{ post.url | prepend: site.baseurl }}" title="Read More" rel="nofollow"><span>&#10149;</span>Read More</a></p>
       </article>{% endfor %}
       {% if paginator.total_pages > 1 %}<div id="pagination"><ul class="index-pagination">{% for page in (1..paginator.total_pages) %}
         {% if page == paginator.page %}<li class="current"><a href="javascript:void(0);">{{ page }}</a></li>{% else %}<li><a href="/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a></li>{% endif %}{% endfor %}

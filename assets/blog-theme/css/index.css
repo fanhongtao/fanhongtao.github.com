@@ -79,8 +79,6 @@ nav{
 .main hr { margin-top: 10px; margin-bottom: 10px; }
 
 .posthead { text-align: center; border-bottom: 1px dashed #a0a0a0; }
-.posthead  a { border-bottom: 1px dotted #686868; color: #343434; }
-.posthead  a:hover { background: #c3c3c3; border-bottom: 1px solid #777; text-decoration: none; }
 .posthead  .description { padding: 8px 12px; border-top: 1px dashed #a0a0a0; font-style: italic; color: #888; }
 .postbody pre  { background-color: #e8e8e8; border-left: 1px solid #1f1f1f; border-top: 1px solid #1f1f1f; border-right: 1px solid #1f1f1f; border-bottom: 1px solid #1f1f1f; font: 12px/1.5 Monaco,serif; margin: 10px 0 10px 0px; overflow:  auto; color: #303030; border-radius: 3px 3px 3px 3px; }
 
@@ -123,7 +121,7 @@ footer a:hover {color: #bbb;text-decoration: none;}    /* 鼠标移动到链接�
 footer a:active {color: #bbb}     /* 选定的链接 */
 footer .point{ margin: 0 8px; }
 
-/* 供 category 和 tags 使用  */
+/* 供 category.html 和 tag.html 使用  */
 .tag-page h2 {margin-top: 0px}
 .tag-box li i { opacity: .9; }
 .tag-box a { padding: 4px 6px; margin: 2px; background: #eee; color: #555; border-radius: 3px; text-decoration: none; border: 1px dashed #cccccc; }
@@ -134,6 +132,14 @@ footer .point{ margin: 0 8px; }
 .inline li { float: left; position: relative; margin-left: 10px; line-height: 30px; }
 .tag-item li {line-height: 35px;list-style:none;}
 .tag-item span {color:#777}
+
+/* index 和 post 页面上，显示 category 和 tag  */
+.page[index] .metadata { min-height: 20px; }
+.page[post] .metadata { min-height: 20px; display:flex; flex-wrap: wrap; justify-content:center; }
+.meta-info { float:left; margin-right:15px; }
+.meta-info i { padding-right:0; margin-right:3px; }
+.meta-info a { border-bottom: 1px dotted #686868; color: #343434; }
+.meta-info a:hover { background: #c3c3c3; border-bottom: 1px solid #777; text-decoration: none; }
 
 /**
  * Blockquotes
