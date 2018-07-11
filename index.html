@@ -16,7 +16,7 @@ layout: default
         <p class="more"><a href="{{ post.url | prepend: site.baseurl }}" title="Read More" rel="nofollow"><span>&#10149;</span>Read More</a></p>
       </article>{% endfor %}
       {% if paginator.total_pages > 1 %}<div id="pagination"><ul class="index-pagination">{% for page in (1..paginator.total_pages) %}
-        {% if page == paginator.page %}<li class="current"><a href="javascript:void(0);">{{ page }}</a></li>{% else %}<li><a href="/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a></li>{% endif %}{% endfor %}
+        {% if page == paginator.page %}<li class="current"><a href="javascript:void(0);">{{ page }}</a></li>{% else %}<li><a href="{{ site.baseurl }}/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a></li>{% endif %}{% endfor %}
       </ul></div>{% endif %}
     </div>
   </section>
