@@ -9,7 +9,7 @@
 <span class="page-tag">
   <i class="fa fa-tags"></i>
   {% for tag in tags %}
-    <a href="{{ site.tags_path | prepend: site.baseurl }}#{{ tag }}">{{ tag }}</a>{% unless forloop.last %}&nbsp;{% endunless %}
+    <a href="{{ site.tags_path | prepend: site.baseurl }}#{{ tag }}">{{ tag }}</a>{% unless forloop.last %}&#x0020;{% endunless %}
   {% endfor %}
 </span>
 </div>

@@ -9,7 +9,7 @@
 <span class="page-category">
   <i class="fa fa-folder-open"></i>
   {% for category in categories %}
-    <a href="{{ site.categories_path | prepend: site.baseurl }}#{{ category }}">{{ category }}</a>{% unless forloop.last %}&nbsp;{% endunless %}
+    <a href="{{ site.categories_path | prepend: site.baseurl }}#{{ category }}">{{ category }}</a>{% unless forloop.last %}&#x0020;{% endunless %}
   {% endfor %}
 </span>
 </div>
