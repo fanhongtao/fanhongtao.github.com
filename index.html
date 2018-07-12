@@ -26,7 +26,7 @@ layout: default
         {% include search_box %}
     </section>
     <hr>
-    <section id="catetory" class="shadow-bottom-center">
+    <section id="category" class="shadow-bottom-center">
       <div class="sidebar-title"> <i class="fa fa-folder-open"></i>  <a href="{{ site.categories_path | prepend: site.baseurl }}"> Categories </a><span title="分类总数">{{ site.categories | size }}</span> </div>
       <div class="category"><ul>{% assign categories = site.categories | sort %}{% for cat in categories %}
         <li><a href="{{ site.categories_path | prepend: site.baseurl }}#{{ cat[0] }}">{{ cat[0] }}<span>({{ cat[1].size }})</span></a></li>{% endfor %}

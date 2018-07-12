@@ -3,6 +3,8 @@
 body { background-color: #f0f0f0; font-family: 'Microsoft YaHei', 'SimHei', sans-serif; }
 pre { padding: 0; background: none; }
 pre code { font-size: 14px; }
+a { color: #343434; text-decoration:none; }
+a:hover, a:focus { color: #343434; background: #c3c3c3; text-decoration: none; }
 
 /* Table */
 table       { border-collapse: collapse; margin: 10px 0 10px; padding: 0; border-top: 2px solid #303030; border-bottom: 2px solid #303030; }
@@ -30,16 +32,14 @@ nav{
 .index-post  { margin-bottom: 20px; padding: 10px 0; border-bottom: 1px dashed #bebebe; }
 .index-post .date    { font-style: italic; color: #888; }
 .index-post header    { font-size: 26px; font-family: Georgia; text-shadow: 1px 1px #FFFFFF; }
-.index-post header a  { color: #343434; }
 .index-post .more { text-align: right; font-family: Verdana; color: #898989; font-size: 12px; }
-.index-post .more a  { color: #343434; }
 
 /*--------------------------------------------
                 page
 --------------------------------------------*/
 .index-pagination                 { background: none repeat scroll 0 0 #FFFFFF; list-style: none outside none; }
 .index-pagination li              { display: inline; padding-top: 20px; }
-.index-pagination li a            { -moz-transition: background-color 0.1s linear 0s, color 0.1s linear 0s; background: none repeat scroll 0 0 #444444; border-radius: 5px 5px 5px 5px; color: #FFFFFF; display: block; float: left; font-size: 12px; margin-right: 7px; padding: 0 6px; text-decoration: none; text-shadow: none; }
+.index-pagination li a            { -moz-transition: background-color 0.1s linear 0s, color 0.1s linear 0s; background: none repeat scroll 0 0 #888888; border-radius: 5px 5px 5px 5px; color: #FFFFFF; display: block; float: left; font-size: 12px; margin-right: 7px; padding: 0 6px; text-decoration: none; text-shadow: none; }
 .index-pagination li.current a    { background-color: #000000; color: #FFFFFF; text-shadow: 0 1px #393B3F; }
 .index-pagination li a:hover      { background-color: #000000; color: #EDEDED; text-shadow: 0 1px #393B3F; }
 
@@ -47,18 +47,14 @@ nav{
 /*--------------------------------------------
                 sidebar
 --------------------------------------------*/
-.sidebar .category ul   {list-style: none; margin: 10px 40px; -webkit-padding-start: 0px; }
-.sidebar .category ul li a { display: block; line-height: 30px; text-decoration: none; color: #393B3F; width: 100%; }
-.sidebar .category ul li a:hover, .sidebar .category ul li a:focus { color: #FF8040; }
-.sidebar .category ul li a span { display: inline-block; float: right; 
-            padding: 0px 8px; line-height: 20px; margin-top: 10px; }
+.sidebar .category ul   {list-style: none; margin: 10px 0px; -webkit-padding-start: 0px; }
+.sidebar .category ul li a { display: block; line-height: 30px; width: 100%; padding-left: 40px; }
+.sidebar .category ul li a span { display: inline-block; float: right; padding: 0px 8px; line-height: 20px; margin-top: 5px; }
 
 .sidebar .tags  { line-height: 1.5; margin: 0px 40px; }
-.sidebar .tags a { color: #393B3F; display: inline; text-decoration: none; }
-.sidebar .tags a:focus, .sidebar .tags a:hover { color: #FF8040; text-decoration: none; }
+.sidebar .tags a { display: inline; }
 
-.sidebar-title { display: block; padding: 12px 15px 0px 12px; font-size: 16px; font-weight: bold; }
-.sidebar-title a { color: #343434; }
+.sidebar-title { display: block; padding: 12px 15px 0px 12px; font-size: 16px; font-weight: bold; margin-bottom: 10px;}
 .sidebar-title span {
     display: inline-block;
     float: right;
@@ -116,8 +112,8 @@ footer{
     box-shadow: 0 -2px 4px rgba(0,0,0,0.5);
 }
 footer a:link {color: #aaa}       /* 未访问的链接 */
-footer a:visited {color: #888}    /* 已访问的链接 */
-footer a:hover {color: #bbb;text-decoration: none;}    /* 鼠标移动到链接上 */
+footer a:visited {color: #aaa}    /* 已访问的链接 */
+footer a:hover, footer a:focus {color: #fff; background: none; }
 footer a:active {color: #bbb}     /* 选定的链接 */
 footer .point{ margin: 0 8px; }
 
