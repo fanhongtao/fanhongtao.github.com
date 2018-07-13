@@ -78,6 +78,8 @@ nav{
 .posthead  .description { padding: 8px 12px; border-top: 1px dashed #a0a0a0; font-style: italic; color: #888; }
 .postbody pre  { background-color: #e8e8e8; border-left: 1px solid #1f1f1f; border-top: 1px solid #1f1f1f; border-right: 1px solid #1f1f1f; border-bottom: 1px solid #1f1f1f; font: 12px/1.5 Monaco,serif; margin: 10px 0 10px 0px; overflow:  auto; color: #303030; border-radius: 3px 3px 3px 3px; }
 
+.post-content a { border-bottom: 1px dotted #686868; }
+
 /** Copyright declaration */
 .post-copyright {
     margin: 20px 10px 15px 0;
@@ -96,6 +98,8 @@ nav{
 .post-copyright p { padding: 0 8px; line-height: 26px; font-size: 12px; color: #155b92; margin: 0px; }
 .post-copyright p a { color: #000; }
 .post-copyright p a:hover { color: #000; }
+
+.pager li>a:hover, .pager li>a:focus { background: #c3c3c3; }
 
 /* footer */
 footer{
