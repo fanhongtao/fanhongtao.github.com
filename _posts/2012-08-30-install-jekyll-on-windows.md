@@ -210,15 +210,17 @@ sudo apt-get install libz-dev
 再创建一个名为 Gemfile 的文本文件，文件的内容为
 
 ```
-source 'https://gems.ruby-china.org/'
+source 'https://gems.ruby-china.com/'
 gem 'github-pages', group: :jekyll_plugins
 ```
 
 然后执行以下命令安装 Jekyll 相关的组件
 
 ```
-sudo bundle install
+bundle install
 ```
+
+> Note: 执行 bundle 时，不需要 sudo 成 root 用户。bundle 会在需要时，提示输入密码。
 
 ## 2.3 安装 nodejs
 
