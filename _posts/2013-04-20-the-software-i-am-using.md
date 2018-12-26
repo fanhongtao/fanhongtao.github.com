@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 我所使用的软件
-description:  记录我使用软件的名称，简单说明，下载地址。更新时间：2018-12-07
+description:  记录我使用软件的名称，简单说明，下载地址。更新时间：2018-12-26
 categories: software
 tags: [tool]
 copyright: cn
@@ -12,7 +12,7 @@ copyright: cn
 
 # 开发/编辑工具
 
-* [Atom](https://atom.io) ：GitHub 开发的一个编辑器。参考：《[Atom基础](/2017/05/01/atom.html)》
+* ~~[Atom](https://atom.io) ：GitHub 开发的一个编辑器。参考：《[Atom基础](/2017/05/01/atom.html)》~~ 现在使用 Visual Studio Code，速度更快，也更容易更新。
 * [Beyond Compare](http://www.scootersoftware.com/) ：文件比较
 * ~~[Eclipse](http://eclipse.org/) : Java代码编辑~~
 * ~~[Enterprise Architect](http://www.sparxsystems.com/products/ea/index.html) : UML建模~~
@@ -22,19 +22,21 @@ copyright: cn
 * [LICEcap](http://www.cockos.com/licecap/) : 将屏幕操作记录成Gif动画。可用于记录操作步骤，方便和他人交流。
 * [SharpDevelop](http://www.icsharpcode.net/OpenSource/SD/Default.aspx) : 小巧的 C# IDE，安装包仅10几兆。
 * [TortoiseGit](https://code.google.com/p/tortoisegit/) : Windows下的Git客户端的UI界面
+* [Visual Studio Code](https://visualstudio.microsoft.com/zh-hans/downloads/) : 代码编辑器
 * ~~[VIM](http://www.vim.org/) : 文本编辑~~
 * ~~[豌豆荚](http://www.wandoujia.com/) : Android手机应用管理~~
 
 # 文件处理
 
 * [7zip](http://sparanoid.com/lab/7z/) : 对文件进行加解压。也可以从 [SourceForge下载](http://sourceforge.net/projects/sevenzip/)
-* [Total Commander](http://www.ghisler.com/) : 资源管理器的替代品，远比Windows自带的资源管理器好用，如：支持多Tab页，文件批量改名等。
+* [Total Commander](http://www.ghisler.com/) : 资源管理器的替代品，远比Windows自带的资源管理器好用，如：支持多Tab页，文件批量改名等。 （推荐）
 
 # 网络
 
-* [Chrome](https://www.google.com/intl/en/chrome/browser/) : 浏览器
+* [Chrome](https://www.google.com/intl/en/chrome/browser/) : 浏览器 （备选）
 * [Fiddler](http://fiddler2.com/) : a free web debugging tool
 * [FileZilla Client](https://filezilla-project.org/) : FTP 工具
+* [FireFox](http://www.firefox.com.cn/) : 浏览器 （推荐）
 * [FeedDeaom](http://www.feeddemon.com/)  : RSS 工具
 * [WireShark](http://www.wireshark.org/) : 抓包工具
 * [Xshell 4](http://www.netsarang.com/products/xsh_overview.html) : 终端模拟软件，用于远程登录Linux服务器
@@ -56,5 +58,5 @@ copyright: cn
 * [AutoHotKey](http://www.autohotkey.com/) : 快捷键管理，可以减少重复输入。如：实现一键输入密码。
 * [calibre](http://calibre-ebook.com/) : 电子书阅读器
 * [Lingoes](http://www.lingoes.cn/) : 灵格斯词霸
-* [MiniTool Partition Wizard](http://www.partitionwizard.com/free-partition-manager.html) : Windows磁盘分区工具
+* ~~[MiniTool Partition Wizard](http://www.partitionwizard.com/free-partition-manager.html) : Windows磁盘分区工具~~
 * ~~[为知笔记](http://www.wiz.cn/) : 知识管理工具~~
