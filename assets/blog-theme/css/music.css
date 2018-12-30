@@ -1,5 +1,5 @@
 table.music caption { text-align: center; color: #303030; }
-table.music, table.music td	{ border: 1px solid #303030; }
+table.music, table.music th, table.music td	{ border: 1px solid #303030; }
 table.music td	{ min-width: 2.2em; }
 table.music tr td.changed { background: #80ff80; }
 
