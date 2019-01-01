@@ -1,0 +1,25 @@
+# standard jekyll configuration
+markdown:         kramdown
+highlighter:      rouge
+paginate:         10     # the number of post per page
+permalink:        /:year/:month/:day/:title.html
+safe:             true
+lsi:              false
+excerpt_separator: <!--more-->
+plugins:
+    - jemoji
+
+# configuration required for some pages
+title:            Fan's Blog
+description:      以经济的眼光观察世界
+author:
+    name:         Fan Hongtao
+    email:        fanhongtao@gmail.com
+
+# configuration for ehancements, uncomment to enable
+github:
+    username: fanhongtao
+
+categories_path: /category.html
+tags_path: /tag.html
+# rss_path: feed.xml

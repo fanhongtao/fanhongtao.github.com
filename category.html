@@ -1,0 +1,12 @@
+---
+layout: page
+title: 文章分类
+header: Posts By Category
+group: navigation
+---
+
+{% capture site_categories %}{% for category in site.categories %}{{ category | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign key_words = site_categories | split:',' | sort %}
+{% assign key_maps = site.categories %}
+
+{% include key_list.html %}

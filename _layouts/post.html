@@ -1,0 +1,44 @@
+---
+layout: default
+---
+<div class="page" post>
+  <article id="myArticle" class="col-sm-9 post-content">
+    <header class="posthead">
+      <h1>{{ page.title }}</h1>
+      <div class="metadata">
+        <div class="meta-info"><i class="fa fa-calendar"></i><time>{{ page.date | date: "%B %d, %Y"  }}</time></div>
+        <div class="meta-info"><i class="fa fa-user"></i>{% if page.book %}{% include book.html %}{% else %} {% if page.author %}{{ page.author }}{% else %}<a href="{{ '/me.html' | prepend: site.baseurl }}" class="author" title="author">{{ site.author.name }}</a>{% endif %}{% endif %}</div>
+        {% include page_category_min.html %}
+        {% include page_tag_min.html %}
+      </div>
+      <hr/>
+      {% if page.description %}<p class="description">{{ page.description }}</p>{% endif %}
+    </header>
+    <hr>
+
+    <section class="postbody">
+{{content}}
+    </section>
+    <hr>
+
+{% include page_copyright.html %}
+    <hr>
+
+    <ul class="pager">
+      {% if page.previous %}<li class="previous"><a href="{{ page.previous.url | prepend: site.baseurl }}" title="{{ page.previous.title }}">&larr; Previous</a></li>{% else %}<li class="previous disabled"><a>&larr; Previous</a></li>{% endif %}
+      {% if page.next %}<li class="next"><a href="{{ page.next.url | prepend: site.baseurl }}" title="{{ page.next.title }}">Next &rarr;</a></li>{% else %}<li class="next disabled"><a>Next &rarr;</a></li>{% endif %}
+    </ul>
+
+    <section id="comment">
+    </section>
+  </article>
+
+  <aside id="sidebar" class="col-sm-3 hidden-xs">
+    <section id="content" class="shadow-bottom-center">
+      <div class="sidebar-title"> Contents </div>
+      <div class="content-text"></div>
+    </section>
+
+{% include qrcode.html %}
+  </aside>
+</div>

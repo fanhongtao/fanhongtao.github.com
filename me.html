@@ -1,0 +1,42 @@
+---
+layout: page
+title: A little about me
+---
+<img src="/assets/images/me.jpg" alt="My Photo" width="230px"/>
+<p/>
+<p>Hi, there. My name is Hongtao Fan. <em>Fan</em> is family name, <em>Hongtao</em> is given name. In China, the family name is put in the first, so the Chinese style calling should be <em>Fan Hongtao</em>. That’s why I use this domain. There are three Chinese characters.</p>
+<table width="382">
+    <thead>
+        <tr>
+            <th width="72" height="19">No.</th>
+            <th width="72" height="19">Chinese</th>
+            <th width="72" height="19">English</th>
+            <th width="166" height="19">Pronunciation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td width="72" height="19">1</td>
+            <td width="72" height="19">范</td>
+            <td width="72" height="19">Fan</td>
+            <td width="166" height="19"> <strong>‘</strong>fan</td>
+        </tr>
+        <tr>
+            <td width="72" height="19">2</td>
+            <td width="72" height="19">洪</td>
+            <td width="72" height="19">Hong</td>
+            <td width="166" height="19"> <strong>‘</strong>ho<span style="font-family: 'Lingoes Unicode';">̇</span>ŋ</td>
+        </tr>
+        <tr>
+            <td width="72" height="19">3</td>
+            <td width="72" height="19">滔</td>
+            <td width="72" height="19">Tao</td>
+            <td width="166" height="19"> <strong>‘</strong>tau<span style="font-family: 'Lingoes Unicode';">̇</span></td>
+        </tr>
+    </tbody>
+</table>
+
+<p>You can contact me at : <a href="mailto:{{ site.author.email }}" title="Mail to {{site.author.name}}"><i class="fa fa-envelope-o"></i> {{ site.author.email }}</a>
+{% if site.github.username %}
+  and <a href="https://github.com/{{ site.github.username }}" title="Fork me on GitHub"><i class="fa fa-github"></i> Github</a>
+{% endif %}

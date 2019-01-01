@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="220" height="230">
+<style>
+path{fill:transparent;stroke-width:1;stroke:rgb(0,0,0);}
+text{font-size: 150%}
+</style>
+<!-- A(30,80); B(200,80); P(120,30); Q(80,200);-->
+<path d="M30 80 L80 200 L200 80 L120 30 L30 80 L200 80 M120 30 L80 200"/>
+<text x="5" y="90">A</text>
+<text x="200" y="90">B</text>
+<text x="120" y="26">P</text>
+<text x="80" y="225">Q</text>
+<text x="110" y="110">M</text>
+</svg>

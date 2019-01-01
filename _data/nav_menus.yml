@@ -1,0 +1,25 @@
+-
+ url:   /index.html
+ text:  首页
+ icon:  fa-home
+ 
+-
+ url:   /category.html
+ text:  分类
+ icon:  fa-folder-open
+
+-
+ url:   /tag.html
+ text:  标签
+ icon:  fa-tags
+
+-
+ url:   /me.html
+ text:  关于我
+ icon:  fa-user
+
+-
+ url:   /feed.xml
+ text:  RSS
+ icon:  fa-rss
+ 

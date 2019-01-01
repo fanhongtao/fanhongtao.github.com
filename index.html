@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<div id="index" class="page" index>
+  <section id="main" class="col-sm-9">
+    <div id="main-inner" class="main">
+      {% for post in paginator.posts %}<article class="index-post">
+        <header><a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></header>
+        <div class="metadata">
+          <div class="meta-info"><i class="fa fa-calendar"></i><time>{{ post.date | date: "%B %d, %Y"  }}</time></div>
+          {% include page_category_min.html %}
+          {% include page_tag_min.html %}
+        </div>
+        <hr/>
+        <p>{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html | truncate:200 }}{% endif %}</p>
+        <p class="more"><a href="{{ post.url | prepend: site.baseurl }}" title="Read More" rel="nofollow"><span>&#10149;</span>Read More</a></p>
+      </article>{% endfor %}
+      {% if paginator.total_pages > 1 %}<div id="pagination"><ul class="index-pagination">{% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}<li class="current"><a href="javascript:void(0);">{{ page }}</a></li>{% else %}<li><a href="{{ site.baseurl }}/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a></li>{% endif %}{% endfor %}
+      </ul></div>{% endif %}
+    </div>
+  </section>
+
+  <aside id="sidebar" class="col-sm-3 sidebar hidden-xs">
+    <section id="search">
+        {% include search_box %}
+    </section>
+    <hr>
+    <section id="category" class="shadow-bottom-center">
+      <div class="sidebar-title"> <i class="fa fa-folder-open"></i>  <a href="{{ site.categories_path | prepend: site.baseurl }}"> Categories </a><span title="分类总数">{{ site.categories | size }}</span> </div>
+      <div class="category"><ul>{% assign categories = site.categories | sort %}{% for cat in categories %}
+        <li><a href="{{ site.categories_path | prepend: site.baseurl }}#{{ cat[0] }}">{{ cat[0] }}<span>({{ cat[1].size }})</span></a></li>{% endfor %}
+      </ul></div>
+    </section>
+
+    <section id="tags" class="shadow-bottom-center">
+      <div class="sidebar-title"> <i class="fa fa-tags"></i> <a href="{{ site.tags_path | prepend: site.baseurl }}"> Tags </a><span title="标签总数">{{ site.tags | size }}</span></div>
+      <div class="tags">{% for tag in site.tags %}
+        <a href="{{ site.tags_path | prepend: site.baseurl }}#{{ tag[0] }}" style='font-size:{{ tag[1].size | times: 2 | plus: 15  }}px;'>{{ tag[0] }}</a>{% endfor %}
+      </div>
+    </section>
+
+    {% include qrcode.html %}
+  </aside>
+</div>
