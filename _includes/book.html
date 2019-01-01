@@ -1,0 +1,18 @@
+<style>
+#book .name { display:inline; }
+#book .hint { display: none; position: fixed; background:#ddd; z-index:999; }
+#book .name:hover +.hint{ display: inline; }
+</style>
+<div id='book' style="display:inline;">{% for b in site.data.books %}{% if page.book == b.name %}
+<div class="name">《{{ b.name }}》</div>
+<div class="hint">
+<table>
+<tr><td>作者</td><td>{{b.author}}</td></tr>
+<tr><td>ISBN</td><td>{{b.isbn}}</td></tr>
+{% if b.cip %}<tr><td>CIP</td><td>{{b.cip}}</td></tr>{%endif%}
+<tr><td>出版社</td><td>{{b.publisher}}</td></tr>
+{% if b.edition %}<tr><td>版 次</td><td>{{b.edition}}</td></tr>{%endif%}
+</table>
+</div>
+{%break%}{%endif%}
+{% endfor %}</div>

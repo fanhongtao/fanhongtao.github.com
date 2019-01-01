@@ -14,13 +14,5 @@
   <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/blog-theme/css/pygments.css" />
   <link rel="stylesheet" type="text/css" href="{{ "/assets/blog-theme/css/index.css" | prepend: site.baseurl }}">
   <script type="text/javascript" src="{{ "/assets/blog-theme/js/index.js" | prepend:site.baseurl }}"></script>
-
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-    });
-  </script>
-  <script type="text/javascript" async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML">
-  </script>
+{% include mathjax.html %}
 </head>
