@@ -33,7 +33,7 @@ $$\frac{S_{\triangle PAB}}{S_{\triangle QAB}} = \frac {PM}{QM}$$
 
 图形有如下4种情形
 
-|||||
+|transparent&&&&||||
 |:--:|:--:|:--:|:--:|
 | <img src="{{ "/pic/gongbianbili/a.svg" | prepend:site.baseurl }}"/> |<img src="{{ "/pic/gongbianbili/b.svg" | prepend:site.baseurl }}"/> | <img src="{{ "/pic/gongbianbili/c.svg" | prepend:site.baseurl }}"/> | <img src="{{ "/pic/gongbianbili/d.svg" | prepend:site.baseurl }}"/> |
 | (a) | (b) | (c) | (d) |
