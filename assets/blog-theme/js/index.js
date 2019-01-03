@@ -67,8 +67,8 @@ function formatTable() {
  * 支持的格式为：
  *    class && caption && head
  * class : 指定表格的CSS class属性。为空表示表格不用添加 class 属性。
- * caption : 指定表格的标题。为空表示表格无标题。
- * head : <th> 字段所要显示的内容
+ * caption : 指定表格的标题。为空表示表格无标题。支持输入 html 元素。
+ * head : <th> 字段所要显示的内容。支持输入 html 元素。
  */
 function setTableClassAndCaption(tabindex, tabitem) {
   var tableFmt = RegExp(/.*&&.*&&.*/); // 自定义的表头格式
@@ -81,10 +81,10 @@ function setTableClassAndCaption(tabindex, tabitem) {
       }
       var cap = arr[1].trim();
       if (cap.length != 0) {
-        var caption =$("<caption></caption>").text(cap);
+        var caption =$("<caption></caption>").html(cap);
         $(tabitem).prepend(caption);
       }
-      $(thitem).text(arr[2]);
+      $(thitem).html(arr[2]);
     }
   });
 }
