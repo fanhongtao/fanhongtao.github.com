@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_music
 title: 和弦音程计算器
 categories: 工具
 tags: [工具]
@@ -12,10 +12,14 @@ copyright: cn
 
 <script type="text/javascript" src="{{ site.baseurl }}{% link /js/calc-interval.js %}"></script>
 
-|根音到3音 | <select id="root"><option selected="selected">大3度</option><option>小3度</option></select> |
-|3音到5音  | <select id="third"><option selected="selected">大3度</option><option>小3度</option></select> |
-|5音到7音  | <select id="fifth"><option selected="selected">NA</option><option>大3度</option><option>小3度</option></select> |
-|7音到9音  | <select id="seventh"><option selected="selected">NA</option><option>大3度</option><option>小3度</option></select> |
-|9音到11音 | <select id="ninth"><option selected="selected">NA</option><option>大3度</option><option>小3度</option></select> |
-|11音到13音| <select id="eleventh"><option selected="selected">NA</option><option>大3度</option><option>小3度</option></select> |
-|<input id="calc" type="button" value="计算结果"/>  | <input id="result" type="text"/> |
+在表格中选择各个三度音的组成，然后点击表格最后一行的 `计算音程` 按钮。
+
+|&&和弦音程计算器&&序号|三度音|与根音的音程|
+|---|
+|1| <select id="triad_1"><option selected="selected">大3度</option><option>小3度</option></select> |
+|2| <select id="triad_2"><option selected="selected">大3度</option><option>小3度</option></select> | <input id="interval_2" type="text" readonly/> |
+|3| <select id="triad_3"><option selected="selected">NA</option><option>大3度</option><option>小3度</option></select> | <input id="interval_3" type="text" readonly/> |
+|4| <select id="triad_4"><option selected="selected">NA</option><option>大3度</option><option>小3度</option></select> | <input id="interval_4" type="text" readonly/> |
+|5| <select id="triad_5"><option selected="selected">NA</option><option>大3度</option><option>小3度</option></select> | <input id="interval_5" type="text" readonly/> |
+|6| <select id="triad_6"><option selected="selected">NA</option><option>大3度</option><option>小3度</option></select> | <input id="interval_6" type="text" readonly/> |
+|||<input id="calc" type="button" value="计算音程"/> |
