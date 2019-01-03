@@ -28,18 +28,9 @@ copyright: cn
 
 自然大调音阶(Natural Major Scale)的排序规则如下表（每格表示半度）：
 
-<table class="music">
-<caption>自然大调音阶</caption>
-<tr>
-<td>1</td><td>&nbsp;</td>
-<td>2</td><td>&nbsp;</td>
-<td>3</td><td>4</td>
-<td>&nbsp;</td><td>5</td>
-<td>&nbsp;</td><td>6</td>
-<td>&nbsp;</td><td>7</td>
-<td><div class="note"><div class="dot">·</div>1</div></td>
-</tr>
-</table>
+|music&&自然大调音阶&&|
+|---|
+|1| |2| |3|4| |5| |6| |7|&&<div class="note"><div class="dot">·</div>1</div>|
 
 其中， 
 * 1-2、2-3、4-5 和 5-6 是全音
@@ -49,70 +40,20 @@ copyright: cn
 
 将音名 C 当作音阶的主音，再依照自然大调音阶的结构来排列音阶，这样所得到的音阶，就称为 C 自然大调音阶。
 
-<table class="music">
-<caption>C大调音阶</caption>
-<tr>
-<td>1</td><td>&nbsp;</td>
-<td>2</td><td>&nbsp;</td>
-<td>3</td><td>4</td>
-<td>&nbsp;</td><td>5</td>
-<td>&nbsp;</td><td>6</td>
-<td>&nbsp;</td><td>7</td>
-<td><div class="note"><div class="dot">·</div>1</div></td><td>&nbsp;</td>
-<td><div class="note"><div class="dot">·</div>2</div></td>
-</tr>
-<tr>
-<td>C</td><td>&nbsp;</td>
-<td>D</td><td>&nbsp;</td>
-<td>E</td><td>F</td>
-<td>&nbsp;</td><td>G</td>
-<td>&nbsp;</td><td>A</td>
-<td>&nbsp;</td><td>B</td>
-<td>C</td><td>&nbsp;</td>
-<td>D</td>
-</tr>
-</table>
+|music&&C大调音阶&&|
+|---|
+|1| |2| |3|4| |5| |6| |7|&&<div class="note"><div class="dot">·</div>1</div>| |&&<div class="note"><div class="dot">·</div>2</div>|
+|C| |D| |E|F| |G| |A| |B|C| |D|
 
 ## 2.3 G大调音阶
 
-将音名 G 当作音阶的主音，再依照自然大调音阶的结构来排列音阶，这样所得到的音阶，就称为 C 自然大调音阶。
+将音名 G 当作音阶的主音，再依照自然大调音阶的结构来排列音阶，这样所得到的音阶，就称为 G 自然大调音阶。
 
-<table class="music">
-<caption>G大调音阶</caption>
-<tr>
-<td>自然大调</td>
-<td>1</td><td>&nbsp;</td>
-<td>2</td><td>&nbsp;</td>
-<td>3</td><td>4</td>
-<td>&nbsp;</td><td>5</td>
-<td>&nbsp;</td><td>6</td>
-<td>&nbsp;</td><td>7</td>
-<td><div class="note"><div class="dot">·</div>1</div></td><td>&nbsp;</td>
-<td><div class="note"><div class="dot">·</div>2</div></td>
-</tr>
-<tr>
-<td>钢琴键盘</td>
-<td>G</td><td>&nbsp;</td>
-<td>A</td><td>&nbsp;</td>
-<td>B</td><td>C</td>
-<td>&nbsp;</td><td>D</td>
-<td>&nbsp;</td><td>E</td>
-<td>F</td><td>&nbsp;</td>
-<td>G</td><td>&nbsp;</td>
-<td>A</td>
-</tr>
-<tr>
-<td>G大调</td>
-<td>G</td><td>&nbsp;</td>
-<td>A</td><td>&nbsp;</td>
-<td>B</td><td>C</td>
-<td>&nbsp;</td><td>D</td>
-<td>&nbsp;</td><td>E</td>
-<td class="changed">&nbsp;</td><td class="changed"><div class="note"><div class="notemark"><sup>#</sup></div>F</div></td>
-<td>G</td><td>&nbsp;</td>
-<td>A</td>
-</tr>
-</table>
+|music&&G大调音阶&&|
+|---|
+|自然大调|1| |2| |3|4| |5| |6| |7|&&<div class="note"><div class="dot">·</div>1</div>| |&&<div class="note"><div class="dot">·</div>2</div>|
+|钢琴键盘|G| |A| |B|C| |D| |E|F| |G| |A|
+|G大调   |G| |A| |B|C| |D| |E|changed&&|changed&&<div class="note"><div class="notemark">&lt;sup>#&lt;/sup></div>F</div> |G| |A|
 
 ## 2.4 通用判断方法
 
@@ -129,170 +70,25 @@ copyright: cn
 
 ## 2.5 大调汇总
 
-<table class="music">
 <!-- 本表格采用简化方式写升降记号。升号： &#x266f;  降号： &#x266d; -->
-<caption>大调汇总</caption>
-<tr>
-<th></th>
-<th>1</th><th>&nbsp;</th>
-<th>2</th><th>&nbsp;</th>
-<th>3</th><th>4</th>
-<th>&nbsp;</th><th>5</th>
-<th>&nbsp;</th><th>6</th>
-<th>&nbsp;</th><th>7</th>
-<th>1</th>
-</tr>
-<tr>
-<td>C大调 (无升降记号)</td>
-<td>C</td><td>&nbsp;</td>
-<td>D</td><td>&nbsp;</td>
-<td>E</td><td>F</td>
-<td>&nbsp;</td><td>G</td>
-<td>&nbsp;</td><td>A</td>
-<td>&nbsp;</td><td>B</td>
-<td>C</td>
-</tr>
-<tr>
-<td>G大调 (1个升号)</td>
-<td>G</td><td>&nbsp;</td>
-<td>A</td><td>&nbsp;</td>
-<td>B</td><td>C</td>
-<td>&nbsp;</td><td>D</td>
-<td>&nbsp;</td><td>E</td>
-<td>&nbsp;</td><td>F<sup>&#x266f;</sup></td>
-<td>G</td>
-</tr>
-<tr>
-<td>D大调 (2个升号)</td>
-<td>D</td><td>&nbsp;</td>
-<td>E</td><td>&nbsp;</td>
-<td>F<sup>&#x266f;</sup></td><td>G</td>
-<td>&nbsp;</td><td>A</td>
-<td>&nbsp;</td><td>B</td>
-<td>&nbsp;</td><td>C<sup>&#x266f;</sup></td>
-<td>D</td>
-</tr>
-<tr>
-<td>A大调 (3个升号)</td>
-<td>A</td><td>&nbsp;</td>
-<td>B</td><td>&nbsp;</td>
-<td>C<sup>&#x266f;</sup></td><td>D</td>
-<td>&nbsp;</td><td>E</td>
-<td>&nbsp;</td><td>F<sup>&#x266f;</sup></td>
-<td>&nbsp;</td><td>G<sup>&#x266f;</sup></td>
-<td>A</td>
-</tr>
-<tr>
-<td>E大调 (4个升号)</td>
-<td>E</td><td>&nbsp;</td>
-<td>F<sup>&#x266f;</sup></td><td>&nbsp;</td>
-<td>G<sup>&#x266f;</sup></td><td>A</td>
-<td>&nbsp;</td><td>B</td>
-<td>&nbsp;</td><td>C<sup>&#x266f;</sup></td>
-<td>&nbsp;</td><td>D<sup>&#x266f;</sup></td>
-<td>E</td>
-</tr>
-<tr>
-<td>B大调 (5个升号)</td>
-<td>B</td><td>&nbsp;</td>
-<td>C<sup>&#x266f;</sup></td><td>&nbsp;</td>
-<td>D<sup>&#x266f;</sup></td><td>E</td>
-<td>&nbsp;</td><td>F<sup>&#x266f;</sup></td>
-<td>&nbsp;</td><td>G<sup>&#x266f;</sup></td>
-<td>&nbsp;</td><td>A<sup>&#x266f;</sup></td>
-<td>B</td>
-</tr>
-<tr>
-<td>F<sup>&#x266f;</sup>大调 (6个升号)</td>
-<td>F<sup>&#x266f;</sup></td><td>&nbsp;</td>
-<td>G<sup>&#x266f;</sup></td><td>&nbsp;</td>
-<td>A<sup>&#x266f;</sup></td><td>B</td>
-<td>&nbsp;</td><td>C<sup>&#x266f;</sup></td>
-<td>&nbsp;</td><td>D<sup>&#x266f;</sup></td>
-<td>&nbsp;</td><td>E<sup>&#x266f;</sup></td>
-<td>F<sup>&#x266f;</sup></td>
-</tr>
-<tr>
-<td>C<sup>&#x266f;</sup>大调 (7个升号)</td>
-<td>C<sup>&#x266f;</sup></td><td>&nbsp;</td>
-<td>D<sup>&#x266f;</sup></td><td>&nbsp;</td>
-<td>E<sup>&#x266f;</sup></td><td>F<sup>&#x266f;</sup></td>
-<td>&nbsp;</td><td>G<sup>&#x266f;</sup></td>
-<td>&nbsp;</td><td>A<sup>&#x266f;</sup></td>
-<td>&nbsp;</td><td>B<sup>&#x266f;</sup></td>
-<td>C<sup>&#x266f;</sup></td>
-</tr>
-<tr>
-<td>F大调 (1个降号)</td>
-<td>F</td><td>&nbsp;</td>
-<td>G</td><td>&nbsp;</td>
-<td>A</td><td>B<sup>&#x266d;</sup></td>
-<td>&nbsp;</td><td>C</td>
-<td>&nbsp;</td><td>D</td>
-<td>&nbsp;</td><td>E</td>
-<td>F</td>
-</tr>
-<tr>
-<td>B<sup>&#x266d;</sup>大调 (2个降号)</td>
-<td>B<sup>&#x266d;</sup></td><td>&nbsp;</td>
-<td>C</td><td>&nbsp;</td>
-<td>D</td><td>E<sup>&#x266d;</sup></td>
-<td>&nbsp;</td><td>F</td>
-<td>&nbsp;</td><td>G</td>
-<td>&nbsp;</td><td>A</td>
-<td>B<sup>&#x266d;</sup></td>
-</tr>
-<tr>
-<td>E<sup>&#x266d;</sup>大调 (3个降号)</td>
-<td>E<sup>&#x266d;</sup></td><td>&nbsp;</td>
-<td>F</td><td>&nbsp;</td>
-<td>G</td><td>A<sup>&#x266d;</sup></td>
-<td>&nbsp;</td><td>B<sup>&#x266d;</sup></td>
-<td>&nbsp;</td><td>C</td>
-<td>&nbsp;</td><td>D</td>
-<td>E<sup>&#x266d;</sup></td>
-</tr>
-<tr>
-<td>A<sup>&#x266d;</sup>大调 (4个降号)</td>
-<td>A<sup>&#x266d;</sup></td><td>&nbsp;</td>
-<td>B<sup>&#x266d;</sup></td><td>&nbsp;</td>
-<td>C</td><td>D<sup>&#x266d;</sup></td>
-<td>&nbsp;</td><td>E<sup>&#x266d;</sup></td>
-<td>&nbsp;</td><td>F</td>
-<td>&nbsp;</td><td>G</td>
-<td>A<sup>&#x266d;</sup></td>
-</tr>
-<tr>
-<td>D<sup>&#x266d;</sup>大调 (5个降号)</td>
-<td>D<sup>&#x266d;</sup></td><td>&nbsp;</td>
-<td>E<sup>&#x266d;</sup></td><td>&nbsp;</td>
-<td>F</td><td>G<sup>&#x266d;</sup></td>
-<td>&nbsp;</td><td>A<sup>&#x266d;</sup></td>
-<td>&nbsp;</td><td>B<sup>&#x266d;</sup></td>
-<td>&nbsp;</td><td>C</td>
-<td>D<sup>&#x266d;</sup></td>
-</tr>
-<tr>
-<td>G<sup>&#x266d;</sup>大调 (6个降号)</td>
-<td>G<sup>&#x266d;</sup></td><td>&nbsp;</td>
-<td>A<sup>&#x266d;</sup></td><td>&nbsp;</td>
-<td>B<sup>&#x266d;</sup></td><td>C<sup>&#x266d;</sup></td>
-<td>&nbsp;</td><td>D<sup>&#x266d;</sup></td>
-<td>&nbsp;</td><td>E<sup>&#x266d;</sup></td>
-<td>&nbsp;</td><td>F</td>
-<td>G<sup>&#x266d;</sup></td>
-</tr>
-<tr>
-<td>C<sup>&#x266d;</sup>大调 (7个降号)</td>
-<td>C<sup>&#x266d;</sup></td><td>&nbsp;</td>
-<td>D<sup>&#x266d;</sup></td><td>&nbsp;</td>
-<td>E<sup>&#x266d;</sup></td><td>F<sup>&#x266d;</sup></td>
-<td>&nbsp;</td><td>G<sup>&#x266d;</sup></td>
-<td>&nbsp;</td><td>A<sup>&#x266d;</sup></td>
-<td>&nbsp;</td><td>B<sup>&#x266d;</sup></td>
-<td>C<sup>&#x266d;</sup></td>
-</tr>
-</table>
+
+|music&&大调汇总&&|1| |2| |3|4| |5| |6| |7|1|
+|---|
+|C大调 (无升降记号)|C| |D| |E|F| |G| |A| |B|C|
+|G大调 (1个升号)   |G| |A| |B|C| |D| |E| |F<sup>&#x266f;</sup>|G|
+|D大调 (2个升号)   |D| |E| |F<sup>&#x266f;</sup>|G| |A| |B| |C<sup>&#x266f;</sup>|D|
+|A大调 (3个升号)   |A| |B| |C<sup>&#x266f;</sup>|D| |E| |F<sup>&#x266f;</sup>| |G<sup>&#x266f;</sup>|A|
+|E大调 (4个升号)   |E| |F<sup>&#x266f;</sup>| |G<sup>&#x266f;</sup>|A| |B| |C<sup>&#x266f;</sup>| |D<sup>&#x266f;</sup>|E|
+|B大调 (5个升号)   |B| |C<sup>&#x266f;</sup>| |D<sup>&#x266f;</sup>|E| |F<sup>&#x266f;</sup>| |G<sup>&#x266f;</sup>| |A<sup>&#x266f;</sup>|B|
+|F<sup>&#x266f;</sup>大调 (6个升号)   |F<sup>&#x266f;</sup>| |G<sup>&#x266f;</sup>| |A<sup>&#x266f;</sup>|B| |C<sup>&#x266f;</sup>| |D<sup>&#x266f;</sup>| |E<sup>&#x266f;</sup>|F<sup>&#x266f;</sup>|
+|C<sup>&#x266f;</sup>大调 (7个升号)   |C<sup>&#x266f;</sup>| |D<sup>&#x266f;</sup>| |E<sup>&#x266f;</sup>|F<sup>&#x266f;</sup>| |G<sup>&#x266f;</sup>| |A<sup>&#x266f;</sup>| |B<sup>&#x266f;</sup>|C<sup>&#x266f;</sup>|
+|F大调 (1个降号)|F| |G| |A|B<sup>&#x266d;</sup>| |C| |D| |E|F|
+|B<sup>&#x266d;</sup>大调 (2个降号)|B<sup>&#x266d;</sup>| |C| |D|E<sup>&#x266d;</sup>| |F| |G| |A|B<sup>&#x266d;</sup>|
+|E<sup>&#x266d;</sup>大调 (3个降号)|E<sup>&#x266d;</sup>| |F| |G|A<sup>&#x266d;</sup>| |B<sup>&#x266d;</sup>| |C| |D|E<sup>&#x266d;</sup>|
+|A<sup>&#x266d;</sup>大调 (4个降号)|A<sup>&#x266d;</sup>| |B<sup>&#x266d;</sup>| |C|D<sup>&#x266d;</sup>| |E<sup>&#x266d;</sup>| |F| |G|A<sup>&#x266d;</sup>|
+|D<sup>&#x266d;</sup>大调 (5个降号)|D<sup>&#x266d;</sup>| |E<sup>&#x266d;</sup>| |F|G<sup>&#x266d;</sup>| |A<sup>&#x266d;</sup>| |B<sup>&#x266d;</sup>| |C|D<sup>&#x266d;</sup>|
+|G<sup>&#x266d;</sup>大调 (6个降号)|G<sup>&#x266d;</sup>| |A<sup>&#x266d;</sup>| |B<sup>&#x266d;</sup>|C<sup>&#x266d;</sup>| |D<sup>&#x266d;</sup>| |E<sup>&#x266d;</sup>| |F|G<sup>&#x266d;</sup>|
+|C<sup>&#x266d;</sup>大调 (7个降号)|C<sup>&#x266d;</sup>| |D<sup>&#x266d;</sup>| |E<sup>&#x266d;</sup>|F<sup>&#x266d;</sup>| |G<sup>&#x266d;</sup>| |A<sup>&#x266d;</sup>| |B<sup>&#x266d;</sup>|C<sup>&#x266d;</sup>|
 
 
 # 3 自然小调音阶
