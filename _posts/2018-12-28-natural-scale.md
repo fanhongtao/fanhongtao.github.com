@@ -6,9 +6,6 @@ tags: [music]
 copyright: cn
 ---
 
-* content
-{:toc}
-
 # 1 概述
 
 在大小调乐制中，以 C、D、E、F、G、A、B七个字母命名的音，叫基本音级。它们就是钢琴白键白键上所发出的音。
@@ -23,6 +20,8 @@ copyright: cn
 * 如果固定将 C 唱作 do，则称为“固定唱名法”。
 
 # 2 自然大调音阶 
+
+> 参考 [Major scale](https://en.wikipedia.org/wiki/Major_scale)
 
 ## 2.1 自然大调音阶排序
 
@@ -93,6 +92,8 @@ copyright: cn
 
 # 3 自然小调音阶
 
+> 参考 [Minor scale](https://en.wikipedia.org/wiki/Minor_scale)
+
 ## 3.1 自然小调音阶排序
 
 自然小调音阶(Natural Minor Scale)的排序规则如下表（每格表示半度）：
@@ -119,11 +120,11 @@ copyright: cn
 <tr>
 <td>自然小调</td>
 <td>1</td><td>&nbsp;</td>
-<td>2</td><td><div class="note"><div class="notemark"><sup>b</sup></div>3</div></td>
+<td>2</td><td><sup>b</sup>3</td>
 <td>&nbsp;</td><td>4</td>
 <td>&nbsp;</td><td>5</td>
-<td><div class="note"><div class="notemark"><sup>b</sup></div>6</div></td><td>&nbsp;</td>
-<td><div class="note"><div class="notemark"><sup>b</sup></div>7</div></td><td>&nbsp;</td>
+<td><sup>b</sup>6</td><td>&nbsp;</td>
+<td><sup>b</sup>7</td><td>&nbsp;</td>
 <td><div class="note"><div class="dot">·</div><div class="numdiv">1</div></div></td>
 </tr>
 <tr>
@@ -149,3 +150,42 @@ copyright: cn
 </table>
 
 也可以参照自然大调的方法来制作小纸条。
+
+## 3.3 A小调音阶
+
+|music&&A小调音阶&&|
+|---|
+|自然小调音阶|1| |2|<sup>b</sup>3| |4| |5|<sup>b</sup>6| |<sup>b</sup>7| |&&<div class="note"><div class="dot">·</div>1</div>|
+|钢琴键盘|A| |B|C| |D| |E|F| |G| |A|
+|A小调音阶|A| |B|C| |D| |E|F| |G| |A|
+
+# 4 大调与小调的关系
+
+## 4.1 平行大小调
+
+主音相同的大调与小调，称为平行大小调。如：C大调和C小调就是一组平行大小调。
+
+平行大小调最能对比出大调的明亮与小调的灰暗。
+
+## 4.2 关系大小调
+
+在自然调式中，音列相同、调号也相同的大调与小调，叫做关系大小调。
+
+例如，C大调和A小调互为关系大小调：C大调和A小调的音阶中均无升降号（调号相同），只不过C大调音阶中的主音比A小调同样音级上的音高一个小三度（三个半音）。
+
+事实上，关系大小调的主音之间都是相差三个半音的关系：
+* 大调的主音向左三个半音，就对应小调的主音。
+* 小调的主音向右三个半音，就对应大调的主音。
+
+每个大调都有对应的关系小调，如下图：
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Circle_of_fifths_deluxe_4.svg" title="Circle of fifths, from wikipedia" alt="Circle of fifths showing major and minor keys and their signatures"
+width="500px" height="500px" />
+
+
+> 参考 [Relative key](https://en.wikipedia.org/wiki/Relative_key)
+
+
+* content
+{:toc}
+
