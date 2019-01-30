@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 播放MIDI文件时指定VST音源
+description:  如何使用 Midi Player 或 foobar 播放MIDI文件。更新时间：2019-01-30
 categories: [music, software]
 tags: [music]
 copyright: cn
@@ -49,6 +50,14 @@ MIDI文件本身没有什么特效，只有简单的电子音，不是很好听�
 
 * 如果只是简单的听音乐，那么 foobar 无疑是最好的选择。
 * 如果还想看看钢琴按键这样的效果，那么应该选择 Midi Player。
+
+另外，在使用过程中，我发现 foobar 对 VST 的支持不是很好，经常会出：
+
+* 对某些音源，虽然指定了 VST 目录，便却找不到音源，
+* 对另一些音源，虽然能够加载，但播放时却没有声音。
+
+相比之下，还是 Midi Player 更好用一点。
+
 
 ---
 
