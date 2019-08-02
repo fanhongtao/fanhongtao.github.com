@@ -43,7 +43,17 @@ Docker 将相关的文件（如：下载的镜像、创建的容器）保存在�
 * [Get Docker Engine - Community for Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 * [Ubuntu Docker 安装](https://www.runoob.com/docker/ubuntu-docker-install.html)
 
-卸载 Docker
+为了不 `sudo` 运行 `docker` ， 可以[将当前用户加入 docker 用户组](https://docs.docker.com/install/linux/linux-postinstall/)：
+
+```
+sudo groupadd docker
+sudo usermod -aG docker $USER
+```
+
+重新登录后，就可以直接使用 `docker` 命令了。
+
+
+卸载 Docker：
 
 ```
 sudo apt-get purge docker-ce docker-ce-cli containerd.io
@@ -62,10 +72,12 @@ sudo rm -rf /var/lib/docker
 | help | 查看帮助 |
 | search | 在 [Docker Hub](https://hub.docker.com) 搜索镜像 |
 | pull | 下载镜像 |
-| images | 查看本地的 镜像 image(s) |
+| images | 列出本地的镜像 |
 | create | 创建一个新容器 |
+| ps | 列出容器（默认仅列出正在运行的容器，通过 `-a`参数可列出全部容器） |
 | run | 在新容器里执行命令（每执行一次就会先创建一个新的容器） |
 | container prune | 删除所有已经停止的容器 |
+| rm | 删除容器。通过 `-v` 参数删除关联的 volumes 。 |
 | diff | 查看容器中那些文件有变化 |
 | inspect | 查看 Docker 对象（如：容器、volume）的底层信息 |
 
@@ -76,27 +88,18 @@ sudo rm -rf /var/lib/docker
 清除容器及容器运行时产生的数据
 
 ```
-sudo docker container prune -f
-sudo docker volume prune -f
+docker container prune -f
+docker volume prune -f
 ```
-
-查看当前运行的容器的信息: `sudo docker ps` 或 `sudo docker container ls` ，好像这两个命令等效。
-
-
-查找容器的名字（没有找到适当的命令，采用变通的方法，先通过 `sudo ls -al /var/lib/docker/containers` 查看已有的容器，然后通过容器ID 进行查找）
-```
-sudo docker inspect 容器ID | grep Name
-```
-执行结果中的第一个 Name 就是容器的名字。
 
 
 # 4 使用 GitHub Pages 的 Docker
 
 ## 4.1 下载镜像
 
-* `sudo docker search github-pages` 查询 GitHub Page 相关的镜像
-* `sudo docker pull starefossen/github-pages:172` 下载由 starefossen 提供的 [github-pages镜像](https://hub.docker.com/r/starefossen/github-pages) Tag 为 `172` 的版本。（如果命令中不带 `:172` ，则会下载最新版本）
-* `sudo docker images` ： 检查已经下载的镜像
+* `docker search github-pages` 查询 GitHub Page 相关的镜像
+* `docker pull starefossen/github-pages:172` 下载由 starefossen 提供的 [github-pages镜像](https://hub.docker.com/r/starefossen/github-pages) Tag 为 `172` 的版本。（如果命令中不带 `:172` ，则会下载最新版本）
+* `docker images` ： 检查已经下载的镜像
 
 ## 4.2 单次运行模式
 
@@ -105,7 +108,7 @@ sudo docker inspect 容器ID | grep Name
 在一个GitHub Page的目录下，执行如下命令：
 
 ```
-sudo docker run -i -t --rm -v "$PWD":/usr/src/app -p 4000:4000 starefossen/github-pages:172
+docker run -i -t --rm -v "$PWD":/usr/src/app -p 4000:4000 starefossen/github-pages:172
 ```
 
 参数说明：
@@ -123,7 +126,7 @@ sudo docker run -i -t --rm -v "$PWD":/usr/src/app -p 4000:4000 starefossen/githu
 在一个GitHub Page的目录下，执行如下命令创建容器：
 
 ```
-sudo docker create --name github -v "$PWD":/usr/src/app -p 4000:4000 starefossen/github-pages:172
+docker create --name github -v "$PWD":/usr/src/app -p 4000:4000 starefossen/github-pages:172
 ```
 
 参数说明：
@@ -134,18 +137,18 @@ sudo docker create --name github -v "$PWD":/usr/src/app -p 4000:4000 starefossen
 也可以直接通过 `run` 来创建并执行一个容器：
 
 ```
-sudo docker run -d --name github -v "$PWD":/usr/src/app -p 4000:4000 starefossen/github-pages:172
+docker run -d --name github -v "$PWD":/usr/src/app -p 4000:4000 starefossen/github-pages:172
 ```
 相当于执行了 `docker create` 和 `docker start`。
 
 ### 4.3.2 运行容器
 
-* `sudo docker start github`  ： 启动名为 `github` 的容器
-* `sudo docker stop github` : 停止名为 `github` 的容器
+* `docker start github`  ： 启动名为 `github` 的容器
+* `docker stop github` : 停止名为 `github` 的容器
 
 ### 4.3.3 删除容器
 
-* `sudo docker rm -v github` : 删除名为 `github` 的容器（`-v`参数表示同时删除关联的 volumes）
+* `docker rm -v github` : 删除名为 `github` 的容器（`-v`参数表示同时删除关联的 volumes）
 
 -
 
