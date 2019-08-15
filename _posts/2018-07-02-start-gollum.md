@@ -3,7 +3,7 @@ layout: post
 title: 启动 gollum
 description: 在 Ubuntu 和 Windows 10 Ubuntu 子系统下启动 gollum
 categories: software
-tags: [gollum]
+tags: [gollum, docker]
 copyright: cn
 ---
 
@@ -120,4 +120,33 @@ exit 0
 ## 2.3 启动
 
 执行 BAT 即可。
+
+
+# 3 通过 Docker 启动
+
+如果有多台电脑需要安装，最方便的方式还是通过 [Docker](https://www.docker.com/) 来启动，最多只需要执行 3 条命令！
+
+* [简单介绍Docker的使用]({% post_url 2019-08-01-using-docker %})
+
+* 我定制的 [gollum-alpine](https://cloud.docker.com/u/fanhongtao/repository/docker/fanhongtao/gollum-alpine)
+
+在安装好 Docker 后，只需要在 wiki 所在目录，执行如下命令：
+
+> docker run -i -t -p 8080:4567 -v "$PWD":/wiki --name gollum fanhongtao/gollum-alpine
+
+免除了复杂的安装步骤。其中， `8080` 是wiki对外的端口号，根据自己的情况修改。
+
+另外，为了让 wiki 的 git 记录写自己的信息，还需要在 **首次启动 docker 后** ，执行以下命令，将自己的信息设置到容器中：
+
+> docker exec gollum git config --global user.name "Your name"
+
+> docker exec gollum git config --global user.email "Your email"
+
+
+
+-
+
+* content
+{:toc}
+
 
